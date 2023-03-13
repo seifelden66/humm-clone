@@ -1,0 +1,16 @@
+query shows($limit: Int) {
+  shows(limit: $limit) {
+    slug
+    translations {
+      description
+      title
+      cover {
+        id
+      }
+      
+    }
+    all_episodes_func {
+      count
+    }
+  }
+}

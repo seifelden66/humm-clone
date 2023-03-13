@@ -1,0 +1,9 @@
+query brands {
+  homepage_translations {
+    brands_list {
+      directus_files_id {
+        id
+      }
+    }
+  }
+}

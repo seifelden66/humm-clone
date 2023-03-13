@@ -1,0 +1,17 @@
+query press($limit: Int) {
+  Article(filter: {type: {_eq: "press"}}, limit: $limit) {
+    slug
+    press_link
+    translations {
+      title
+      cover {
+        id
+      }
+    }
+    date_created_func {
+      day
+      year
+      month
+    }
+  }
+}
