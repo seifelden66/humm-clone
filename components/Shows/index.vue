@@ -20,12 +20,13 @@ const { data } = await useAsyncGql({
 <style scoped lang="scss">
 
 .container-fluid{
-  
+    padding: 0;
     color: #fff;
     background-color: #000;
     .nav{
+      padding:1em 4em;
       margin-bottom: 1em;
-      margin-top: 1em;
+      margin-top: 2em;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -37,12 +38,8 @@ const { data } = await useAsyncGql({
           text-decoration: none;
           color: inherit;
         }
-    
-        &-exact-active,
-        &-active {
-          text-decoration: none;
-          color: inherit;
-        }
+       
+
       
       .more{
         border: white solid 1px;
@@ -59,10 +56,12 @@ const { data } = await useAsyncGql({
         
       }
     }
+   
     }
     margin-top: 2em;
     margin-bottom: 2em;
     .articles{
+      margin:0 4em;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px; 
@@ -71,7 +70,7 @@ const { data } = await useAsyncGql({
   
 
  
-  @media (max-width:576px) {
+  @media (max-width:768px) {
     .container-fluid{
       .articles{
         display: grid;

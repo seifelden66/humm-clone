@@ -23,38 +23,38 @@
         .items 
             .item(@click="open") 
                 LogosMenu/
-                h3 Menu
+                h5 Menu
             .item 
                 NuxtLink.link(to="/food")
                     LogosFork/
-                    h3 Food 
+                    h5 Food 
             .item 
                 NuxtLink.link(to="/shows")
                     LogosShows/
-                    h3 Shows 
+                    h5 Shows 
             .item 
                 NuxtLink.link(to="/read")
                     LogosSixLines/
-                    h3 Read
+                    h5 Read
             .item 
                 NuxtLink.link(to="/shop")
                     LogosShop4/
-                    h3 Shop
+                    h5 Shop
         .srch
             input(placeholder="search")
             LogosSearch/
               
 </template>
 
-<script setup lang="ts"></script>
-
 <style lang="scss" scoped>
 .container {
+  width: 95%;
+  margin: 0 auto;
   color: #000;
   display: grid;
   align-items: center;
   min-width: fit-content;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 2fr 1fr;
   .upper {
     display: flex;
     place-items: center;
@@ -95,7 +95,7 @@
   }
   .lower {
     display: grid;
-    grid-template-columns: 2.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 1em;
     border-bottom: black solid 1px;
@@ -152,19 +152,23 @@
 }
 @media (max-width: 768px) {
   .container {
-    width: 99%;
+    width: 80%;
+    margin: 0 auto;
     padding: 0;
-    font-size: 12px;
+    font-size: 10px;
     .upper {
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      gap: 3em;
+      .content{
+        gap:5px;
       .upitem {
         font-size: 20px;
         .text {
           display: none;
         }
       }
+    }
 
       .contBut {
         display: none;
@@ -178,6 +182,14 @@
         margin-right: 1em;
       }
       .items {
+        .item:nth-child(1){
+          display: flex;
+          align-items: center;
+          h5{
+            font-size: 15px;
+            
+          }
+        }
         .item:nth-child(2),
         .item:nth-child(3),
         .item:nth-child(4),

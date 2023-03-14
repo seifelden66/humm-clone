@@ -10,10 +10,6 @@ const { data } =await useAsyncGql({
     variables: { limit },
 });
 
-provide('limit', limit);
-const incrementLimit = () => {
-      limit.value++;
-    };
 
 </script>
 <style lang="scss" scoped>

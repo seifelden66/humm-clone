@@ -30,11 +30,7 @@ const { data } = await useAsyncGql({
           color: inherit;
         }
     
-        &-exact-active,
-        &-active {
-          text-decoration: none;
-          color: inherit;
-        }
+
       
       .more{
         border: black solid 1px;

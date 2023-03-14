@@ -25,6 +25,9 @@ div
             NuxtLink(to="contact" class="lin") contact
 
 </template>
+<script setup lang="ts"> 
+
+</script>
 <style lang="scss" scoped>
 .animate__animated.animate__slideInLeft,
 .animate__animated.animate__slideOutLeft{

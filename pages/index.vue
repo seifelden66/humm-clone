@@ -4,7 +4,6 @@
     Food/
     AdsAd1/
     Read/
-    AdsAd2/
     Shows/
     AdsAd3/
     Form1/
