@@ -62,7 +62,7 @@
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .container {
     display: grid;
     grid-template-columns: 1fr;

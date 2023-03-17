@@ -147,7 +147,7 @@ const { data } = await useAsyncGql({
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .container-fluid {
     font-size: small;
     
@@ -169,7 +169,7 @@ const { data } = await useAsyncGql({
         padding: 0;
         padding-right: 5px;
         display: grid;
-        height: 40vh;
+        height: 200px;
         grid-template-columns: 1fr 1.5fr;
         .cardcontent{
           height: 70%;

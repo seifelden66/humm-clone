@@ -66,7 +66,7 @@
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .container-fluid {
     height: 70vh;
     .overlay {

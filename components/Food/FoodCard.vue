@@ -87,11 +87,12 @@ const props = defineProps(["data"]);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .card {
+    
     .lin {
       min-height: max-content;
-      height: 65vh;
+      height: 300px;
       .image {
         width: 100%;
         height: 20vh;
@@ -101,7 +102,23 @@ const props = defineProps(["data"]);
           object-fit: cover;
         }
       }
+      .btm {
+        margin-top: 1em;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
+        p {
+          margin: 0;
+          display: flex;
+          align-items: center;
+          color: #585858;
+          gap: 0.2em;
+        }
+      }
     }
+    
   }
 }
 @media (max-width: 576px) {

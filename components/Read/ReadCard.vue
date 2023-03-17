@@ -83,7 +83,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .card {
     .lin {
       min-height: max-content;

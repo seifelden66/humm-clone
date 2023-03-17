@@ -67,7 +67,7 @@ const props = defineProps(["data"]);
     box-shadow: 4px 4px white;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 992px) {
     
     display: flex;
     flex-direction: column;
@@ -93,9 +93,9 @@ const props = defineProps(["data"]);
       }
 
       .image {
-        padding: 2em 0; 
-        margin: 0;
-        height: 100%;
+        padding:  0; 
+        margin: auto 0;
+        height: 88%;
         width: 100% !important;
         
       }
