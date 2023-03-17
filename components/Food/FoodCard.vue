@@ -4,9 +4,10 @@
         .image
             img(:src="'https://board.humm.world/assets/'+i.translations[0].cover.id")
         .cat(v-for="item in i.category")
-          NuxtLink(:to="'/food/category/'+item" class="but")
             h6 {{ item }}
         h4 {{ i.slug }}
+      
+          
         
         .btm
             p
@@ -20,15 +21,14 @@ const props = defineProps(["data"]);
 </script>
 
 <style lang="scss" scoped>
-
 .card {
-  
   .lin {
     position: relative;
     text-decoration: none;
     color: inherit;
     padding: 1em;
     height: 50vh;
+    transition: 350ms;
     &:hover {
       text-decoration: none;
       box-shadow: 5px 5px #000;
@@ -52,23 +52,17 @@ const props = defineProps(["data"]);
       justify-content: center;
       align-content: center;
       text-align: center;
-      width: fit-content;
+      width: 8em;
 
-      .but {
-        width: 100%;
-        margin: 0;
+      padding: 0px 10px;
 
-        border-radius: 20px;
-        padding: 0px 10px;
-        text-decoration: none;
-        color: inherit;
-        transition: 300ms;
-        &:hover {
-          text-decoration: none;
-          color: white;
-          background: #000;
-        }
+      color: inherit;
+      transition: 300ms;
+      &:hover {
+        color: white;
+        background: #000;
       }
+
       h6 {
         font-size: 14px;
         display: flex;
@@ -83,7 +77,6 @@ const props = defineProps(["data"]);
       flex-direction: column;
       bottom: 5%;
       p {
-        
         margin: 0;
         display: flex;
         align-items: center;
@@ -93,7 +86,6 @@ const props = defineProps(["data"]);
     }
   }
 }
-
 
 @media (max-width: 768px) {
   .card {

@@ -8,10 +8,12 @@
         
         .right
           .cat(v-for="item in i.category")
-              NuxtLink(:to="'/food/category/'+item" class="but")
+              NuxtLink(:to="'/food/'+item" class="but")
                 p {{ item }}
           .cont 
             h2 {{ i.translations[0].title}}
+            .htm(v-html="i.translations[0].content")
+            
           .btm
             p
                 LogosPerson/ {{ i.user_updated.first_name  }} {{ i.user_updated.last_name }}
@@ -21,6 +23,7 @@
           NuxtLink.images(to="/advertise") 
             img(src="../.././assets/images/ad1.png")
             img(src="../.././assets/images/ad2.png")  
+      
 </template>
 
 <script setup lang="ts">
@@ -42,19 +45,23 @@ const { data } = await useAsyncGql({
   .contentfood {
     margin-top: 2em;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 3fr 1fr;
     gap: 2em;
     .right {
       direction: rtl;
       display: flex;
       flex-direction: column;
-      align-items: right;
-      align-self: right;
+      justify-content: center;
+      gap: 1.5em;
       text-align: right;
+      .htm{
+        text-align: right;
+        font-size: 20px;
+      }
       .cat {
         border: 1px black solid;
         border-radius: 5em;
-        width: 8em;
+        width: 10em;
         display: flex;
         justify-content: center;
         padding: 5px 1em;
@@ -73,11 +80,14 @@ const { data } = await useAsyncGql({
       }
     }
     .left {
+      height: 30vh;
       img {
+        height: 100%;
         width: 100%;
       }
     }
   }
+
 }
 @media (max-width: 768px) {
   .container {
@@ -85,6 +95,7 @@ const { data } = await useAsyncGql({
       display: grid;
       grid-template-columns: 1fr;
       .left{
+        height: auto;
         width: 80vw !important;
         margin: 0 auto;
         .images{
@@ -97,5 +108,6 @@ const { data } = await useAsyncGql({
       }
     }
   }
+
 }
 </style>
