@@ -9,7 +9,7 @@
           p no image
             
         .cont
-            h3 {{ i.slug }}
+            h4 {{ i.slug }}
             p(v-if="i.translations[0].description") {{ i.translations[0].description}}
             p(v-else-if="i.translations[1].description") {{ i.translations[1].description}} 
             p(v-else) no content
@@ -35,24 +35,23 @@ const props = defineProps(["data"]);
     text-decoration: none;
     color: inherit;
     height: 100%;
-    padding:0 1em ;
+    padding: 0 1em;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1em;
-    
-    
-    .cont{
+
+    .cont {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      .plays{
+      .plays {
         color: rgb(160, 160, 160);
         display: flex;
         align-items: center;
         font-size: 14px;
       }
     }
-    
+
     .image {
       width: 100%;
       height: 80%;
@@ -63,32 +62,44 @@ const props = defineProps(["data"]);
         object-fit: cover;
       }
     }
-    
-    
   }
   &:hover {
     box-shadow: 4px 4px white;
   }
-  
+
   @media only screen and (max-width: 768px) {
-    height: auto;
+    
     display: flex;
     flex-direction: column;
-
+    font-size: 12px;
+    height: 15em;
     .lin {
-      grid-template-columns: 1fr;
-      padding: 1em;
-    }
+      padding: 0 1em;
+      display: grid;
+      grid-template-columns: 1.5fr 2fr;
+      gap: 1em;
 
-    .cont {
-      margin-top: 1em;
-    }
+      .cont {
+        margin: 0;
+        padding: 0;
+        display: flex;
 
-    .image {
-      height: 200px;
+        .plays {
+          color: rgb(160, 160, 160);
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+        }
+      }
+
+      .image {
+        padding: 2em 0; 
+        margin: 0;
+        height: 100%;
+        width: 100% !important;
+        
+      }
     }
   }
 }
-
-
 </style>

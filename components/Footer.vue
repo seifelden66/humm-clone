@@ -18,7 +18,7 @@
         .right
             NuxtLink(to="/contact" class="lin")
                 .more 
-                    h3 subscribe
+                    h6 subscribe
     .center 
         NuxtLink(to="/" class="lin")
             LogosLogo/
@@ -74,7 +74,7 @@
       }
     }
     .right {
-      margin-top: 0.5em;
+      
       .lin {
         text-decoration: none;
         color: inherit;
@@ -84,17 +84,17 @@
           color: inherit;
         }
 
-        &-exact-active,
-        &-active {
-          text-decoration: none;
-          color: inherit;
-        }
 
         .more {
+          margin-top: 0.5em;
           border: black solid 1px;
           box-shadow: 5px 5px #000;
           border-radius: 0px;
           padding: 5px 7px;
+          h6{
+            
+            margin: 0;
+          }
           transition: 300ms;
           &:hover {
             background-color: #000;

@@ -10,24 +10,21 @@ div
           LogosCross
         ul.list
           li.listItem
-            NuxtLink(to="/" class="lin") Home
+            nuxt-link(to="/" class="lin" ) Home
           li.listItem
-            NuxtLink(to="food" class="lin") Food
+            nuxt-link(to="/food" class="lin" ) Food
           li.listItem
-            NuxtLink(to="shows" class="lin") Shows
+            nuxt-link(to="/shows" class="lin" ) Shows
           li.listItem
-            NuxtLink(to="read" class="lin") Read
+            nuxt-link(to="/read" class="lin" ) Read
           li.listItem
-            NuxtLink(to="Press" class="lin") Press
+            nuxt-link(to="/Press" class="lin" ) Press
           li.listItem
-            NuxtLink(to="about" class="lin") about us
+            nuxt-link(to="/about" class="lin" ) about us
           li.listItem
-            NuxtLink(to="contact" class="lin") contact
+            nuxt-link(to="/contact" class="lin" ) contact
 
 </template>
-<script setup lang="ts"> 
-
-</script>
 <style lang="scss" scoped>
 .animate__animated.animate__slideInLeft,
 .animate__animated.animate__slideOutLeft{
@@ -63,13 +60,15 @@ div
       .lin {
         text-decoration: none;
         color: inherit;
-
+        
         &:hover {
           text-decoration: none;
           color: rgb(221, 59, 86);
         }
       }
-
+    
+      // Target router-link-active class
+      
     }
   }
 }

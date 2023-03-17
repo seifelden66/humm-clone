@@ -7,10 +7,28 @@ query shows($limit: Int) {
       cover {
         id
       }
-      
     }
     all_episodes_func {
       count
+    }
+    all_episodes {
+      slug
+      video
+      date_created_func {
+        month
+        day
+        year
+      }
+      user_created {
+        first_name
+        last_name
+      }
+      translations {
+        title
+        cover {
+          id
+        }
+      }
     }
   }
 }

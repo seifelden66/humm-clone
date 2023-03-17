@@ -4,7 +4,7 @@
       h1 shows
       NuxtLink(to="/shows" class="lin")
         .more 
-          h3 show more
+          h6 show more
     .articles
         ShowsCard(:data="data" class="article")
 </template>
@@ -12,19 +12,20 @@
 <script setup lang="ts">
 const { data } = await useAsyncGql({
   operation: 'shows',
-  variables: { limit: 2 },
+  variables: { limit: 4 },
 });
 
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 .container-fluid{
     padding: 0;
+    padding-bottom: 1em;
     color: #fff;
     background-color: #000;
     .nav{
-      padding:1em 4em;
+      padding:1em 1.5em;
       margin-bottom: 1em;
       margin-top: 2em;
       display: flex;
@@ -47,6 +48,9 @@ const { data } = await useAsyncGql({
         border-radius: 0px;
         padding: 5px 20px;
         transition: 300ms;
+        h6{
+          margin: 0;
+        }
         &:hover{
           border: black solid 1px;
             background-color: #fff;
@@ -61,7 +65,7 @@ const { data } = await useAsyncGql({
     margin-top: 2em;
     margin-bottom: 2em;
     .articles{
-      margin:0 4em;
+      margin:0 1.5em;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px; 

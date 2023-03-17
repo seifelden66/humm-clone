@@ -4,7 +4,7 @@
     h1 Food
     NuxtLink(to="/food" class="lin")
       .more 
-        h3 more
+        h6 more &rarr;
   .articles
       FoodCard(:data="data" class="article")
 
@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 const { data } = await useAsyncGql({
   operation: "humm",
-  variables: { limit: 8 },
+  variables: { limit: 6 },
 });
 </script>
 
@@ -35,6 +35,9 @@ const { data } = await useAsyncGql({
       box-shadow: 5px 5px #000;
       border-radius: 0px;
       padding: 5px 20px;
+      h6{
+        margin: 0;
+      }
       transition: 300ms;
       &:hover{
           background-color: #000;
@@ -45,7 +48,7 @@ const { data } = await useAsyncGql({
     }
   }
   }
-  margin-top: 2rem;
+  margin-top: 3em;
   .articles{
     display: grid;
     grid-template-columns: repeat(4, 1fr);

@@ -2,10 +2,10 @@
 .container-fluid
     
   .overlay 
-      h2 A world for  food and its lovers.
+      
       NuxtLink(to="/about" class="lin")
         .contBut 
-            h3 Know more
+            p Know more
 </template>
 
 <style lang="scss" scoped>
@@ -21,13 +21,21 @@
   position: relative;
   display: flex;
   .overlay {
-    
+
+    position: absolute;
     margin-top: 30vh;
     margin-bottom: 5vh;
     background: #fff;
-    width: 300px;
-
-    padding: 1em;
+    width: 400px;
+    left: 4vw;
+    padding: 2.5em 3em;
+    
+    &::before {
+      content: "A world for  food and its lovers.";
+      font-size: 2rem; 
+      font-weight: 550;
+      margin: 0.5rem;
+    }
     .lin {
       text-decoration: none;
       color: inherit;
@@ -40,11 +48,14 @@
       .contBut {
         border: black solid 1px;
         box-shadow: 5px 5px #000;
-        padding: 0.25em 0.75em;
-        width: 170px;
-        display: flex;
-        justify-content: center;
-        justify-self: flex-end;
+        padding: .25em;
+        width: 100px;
+        
+        p{
+          font-weight: 550;
+          margin: 0;
+        }
+        
         transition: 300ms;
         &:hover {
           background: #000;
@@ -57,17 +68,75 @@
 }
 @media (max-width: 768px) {
   .container-fluid {
+    height: 70vh;
+    .overlay {
+      font-size: 8px;
+      width: 280px;
+      margin-top: 19vh;
+      margin-bottom: 2vh;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &::before {
+        content: "A world for  food and its lovers.";
+        font-size: 1.5rem; 
+        font-weight: 550;
+        margin-left: 0.5rem;
+      }
+      .contBut {
+        border: black solid 1px;
+        box-shadow: 5px 5px #000;
+        padding: .5em;
+        width: 90px !important;
+        
+        p{
+          font-size: 14px;
+          font-weight: 550;
+          margin: 0;
+        }
+        
+        
+      }
+      
+      
+    }
+  }
+}
+@media (max-width: 576px) {
+  .container-fluid {
     height: 50vh;
     .overlay {
-      font-size: 10px;
-        margin-top: 15vh;
-        margin-bottom: 2vh;
-        background: #fff;
-       
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    
+      font-size: 8px;
+      width: 280px;
+      margin-top: 19vh;
+      margin-bottom: 2vh;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &::before {
+        content: "A world for  food and its lovers.";
+        font-size: 1.5rem; 
+        font-weight: 550;
+        margin-left: 0.5rem;
+      }
+      .contBut {
+        border: black solid 1px;
+        box-shadow: 5px 5px #000;
+        padding: .5em;
+        width: 90px !important;
+        
+        p{
+          font-size: 14px;
+          font-weight: 550;
+          margin: 0;
+        }
+        
+        
+      }
+      
+      
     }
   }
 }

@@ -13,7 +13,7 @@
 
 </template>
 
-<script setup lang="ts"></script>
+
 
 <style scoped lang="scss">
 .container {
@@ -45,6 +45,8 @@
         border: black solid 1px;
         box-shadow: 2px 2px #000;
         border-radius: 0px;
+        display: flex;
+        justify-content: center;
         padding: 2px 20px;
         h5 {
           margin: 0;
@@ -61,11 +63,12 @@
 }
 @media (max-width:992px) {
 .container{
+  gap: 1em;
     font-size: 12px;
     display: grid;
     grid-template-columns: 1fr;
-    width: 70%;
-    justify-items: center;
+    width: 90%;
+    
     .right{
        .frm{
         display: grid;

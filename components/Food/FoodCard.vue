@@ -6,7 +6,7 @@
         .cat(v-for="item in i.category")
           NuxtLink(:to="'/food/category/'+item" class="but")
             h6 {{ item }}
-        h3 {{ i.slug }}
+        h4 {{ i.slug }}
         
         .btm
             p
@@ -20,17 +20,15 @@ const props = defineProps(["data"]);
 </script>
 
 <style lang="scss" scoped>
-* {
-  p {
-    color: #202020;
-  }
-}
+
 .card {
+  
   .lin {
+    position: relative;
     text-decoration: none;
     color: inherit;
     padding: 1em;
-    height: 60vh;
+    height: 50vh;
     &:hover {
       text-decoration: none;
       box-shadow: 5px 5px #000;
@@ -39,6 +37,7 @@ const props = defineProps(["data"]);
 
     .image {
       width: 100%;
+      height: 20vh;
       img {
         width: 100%;
         height: 100%;
@@ -71,24 +70,31 @@ const props = defineProps(["data"]);
         }
       }
       h6 {
+        font-size: 14px;
         display: flex;
         align-self: center;
         margin-top: 5px;
       }
     }
     .btm {
-      
-
-      bottom: 0;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      bottom: 5%;
       p {
+        
+        margin: 0;
         display: flex;
         align-items: center;
-
+        color: #585858;
         gap: 0.2em;
       }
     }
   }
 }
+
+
 @media (max-width: 768px) {
   .card {
     .lin {
@@ -96,7 +102,24 @@ const props = defineProps(["data"]);
       height: 65vh;
       .image {
         width: 100%;
-        height: 30vh;
+        height: 20vh;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .card {
+    .lin {
+      min-height: max-content;
+      height: 60vh;
+      .image {
+        width: 100%;
+        height: 33vh;
         img {
           width: 100%;
           height: 100%;

@@ -4,7 +4,7 @@
         h1 Brands with us
         NuxtLink(to="/advertise" class="lin")
             .more 
-                h3 more
+                h6 show more
     
     .articles
         .card(v-for="i in data.homepage_translations[1].brands_list ")
@@ -36,11 +36,6 @@ const {data}= await useAsyncGql({
         color: inherit;
       }
 
-      &-exact-active,
-      &-active {
-        text-decoration: none;
-        color: inherit;
-      }
 
       .more {
         border: black solid 1px;
@@ -48,6 +43,9 @@ const {data}= await useAsyncGql({
         border-radius: 0px;
         padding: 5px 20px;
         transition: 300ms;
+        h6{
+          margin: 0;
+        }
         &:hover {
           background-color: #000;
           color: #fff;

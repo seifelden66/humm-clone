@@ -1,5 +1,11 @@
 <template lang="pug">
 .container 
+  .nav 
+    h1 press
+    NuxtLink(to="/press" class="lin")
+        .more 
+            h6 show more
+  .articles
     PressCard(:data="data" class="article")
 </template>
 
@@ -14,15 +20,60 @@ const { data } =await useAsyncGql({
 </script>
 <style lang="scss" scoped>
 .container{
+  margin-top: 5em;
+  color: #000;
+  .nav{
+    margin: 0;
     display: flex;
-    align-items: center;
-    gap: 1em;
-  }
-  @media (max-width:768px) {
-    .container{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1em;
+    justify-content: space-between;
+    .lin {
+      text-decoration: none;
+      color: inherit;
+
+    .more{
+      border: black solid 1px;
+      box-shadow: 5px 5px #000;
+      border-radius: 0px;
+      padding: 5px 20px;
+      h6{
+        margin: 0;
+      }
+      transition: 300ms;
+      &:hover{
+          background-color: #000;
+          color: #fff;
+          cursor: pointer;
+      }
+      
     }
   }
+  }
+ 
+  .articles{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; 
+  }
+}
+
+
+@media (max-width:768px) {
+  .container{
+    .articles{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px; 
+    }
+  }
+}
+@media (max-width:576px) {
+  .container{
+    .articles{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px; 
+    }
+  }
+}
 </style>

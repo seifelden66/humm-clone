@@ -5,7 +5,7 @@
         p HUMM is a world for all things food and food-here you will find every thing you need to make an amazing food, to find incredible gifts 
         NuxtLink(to="/about" class="lin")
             .more 
-                h3 about HUMM
+                h6 about HUMM
     .left 
         img(src="../../assets/1.png")
       
@@ -27,21 +27,19 @@
           text-decoration: none;
           color: inherit;
         }
-    
-        &-exact-active,
-        &-active {
-          text-decoration: none;
-          color: inherit;
-        }
     .more {
         border: #000 solid 1px;
         box-shadow: 5px 5px #000;
+        width: 8em;
         border-radius: 0px;
         color: #000;
-        padding: 5px 20px;
+        padding: 5px 10px;
         transition: 300ms;
+        h6{
+          margin: 0;
+        }
         &:hover {
-          border: black solid 1px;
+          border: #fff solid 1px;
           background-color: #000;
           color: #fff;
           cursor: pointer;

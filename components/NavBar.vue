@@ -4,7 +4,7 @@
         NuxtLink(to="/")
             LogosLogo/ 
         .content
-            .upitem
+            NuxtLink.lin(to="/contact" class="upitem")
               .logo 
                 LogosEmail/ 
               .text
@@ -59,6 +59,10 @@
     display: flex;
     place-items: center;
     justify-content: space-between;
+    .lin{
+      text-decoration: none;
+      color: inherit;
+    }
     .contBut {
       border: black solid 1px;
       box-shadow: 5px 5px #000;
@@ -76,6 +80,7 @@
     }
     .upitem {
       display: flex;
+      margin-top: 1em;
       gap: 0.25em;
 
       .text {
@@ -152,7 +157,7 @@
 }
 @media (max-width: 768px) {
   .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 0;
     font-size: 10px;
@@ -161,8 +166,10 @@
       display: flex;
       gap: 3em;
       .content{
+        
         gap:5px;
       .upitem {
+        margin: 0;
         font-size: 20px;
         .text {
           display: none;

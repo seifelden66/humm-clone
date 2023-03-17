@@ -1,35 +1,39 @@
 <template lang="pug">
 .container 
-  div(v-for="i in data.Article")
+  div(v-for="i in data.shows")
     div(v-if="i.slug === namee")
-      .video
-        iframe.frame(:src="'https://www.youtube.com/embed/'+i.video")
-      .contentfood
-        
-        .right
-          .cat(v-for="item in i.category")
-              NuxtLink(:to="'/food/category/'+item" class="but")
-                p {{ item }}
-          .cont 
-            h2 {{ i.translations[0].title}}
-          .btm
-            p
-                LogosPerson/ {{ i.user_updated.first_name  }} {{ i.user_updated.last_name }}
-            p
-                LogosClock/ {{ i.date_created_func.day }} / {{ i.date_created_func.month }} / {{ i.date_created_func.year }}
-        .left
-          NuxtLink.images(to="/advertise") 
-            img(src="../.././assets/images/ad1.png")
-            img(src="../.././assets/images/ad2.png")  
-</template>
+      div(v-for="item in i.all_episodes")
+        div(v-if="item.slug === content")
+          .video
+            iframe.frame(:src="'https://www.youtube.com/embed/'+item.video")
+          .contentfood
+            
+            .right
+              .cat
+                NuxtLink(:to="'/shows/'+i.slug" class="but")
+                  p {{ i.slug }}
+              .cont 
+                h1 {{ item.translations[0].title}}
+              .btm
+                p
+                    LogosPerson/ {{ item.user_created.first_name  }} {{ item.user_created.last_name }}
+                p
+                    LogosClock/ {{ item.date_created_func.day }} / {{ item.date_created_func.month }} / {{ item.date_created_func.year }}
+            .left
+              NuxtLink.images(to="/advertise") 
+                img(src="../../../assets/images/ad1.png")
+                img(src="../../../assets/images/ad2.png")
+                  </template>
 
 <script setup lang="ts">
 const route = useRoute();
 const namee = route.params.slug;
+const content = route.params.content;
 const { data } = await useAsyncGql({
-  operation: "humm",
+  operation: "shows",
 });
 </script>
+
 <style lang="scss">
 .container {
   margin-top: 3em;
@@ -57,7 +61,7 @@ const { data } = await useAsyncGql({
         width: 8em;
         display: flex;
         justify-content: center;
-        padding: 5px 1em;
+        padding:5px 1em;
         transition: 400ms;
         .but {
           color: inherit;
