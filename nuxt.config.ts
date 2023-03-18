@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
+
+
     css: ["bootstrap/dist/css/bootstrap.min.css"],
     runtimeConfig: {
         public: {
@@ -8,18 +10,20 @@ export default defineNuxtConfig({
         }
     },
     modules: [
-        'nuxt-graphql-client',
-        
+        'nuxt-graphql-client','@nuxtjs/i18n'
     ],
-   
 
-    app:{
-        head:{
-            link:[
-                {rel:'stylesheet', href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"}
+
+
+
+    app: {
+        head: {
+            link: [
+                { rel: 'stylesheet', href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" }
             ]
         }
-    }
-    
+    },
+
+
 
 })

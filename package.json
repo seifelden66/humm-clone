@@ -17,6 +17,7 @@
     "animate.css": "^4.1.1",
     "bootstrap-vue": "^2.23.1",
     "nuxt-graphql-client": "^0.2.25",
+    "nuxt-i18n": "^6.28.1",
     "sass": "^1.58.3",
     "scss": "^0.2.4"
   }

@@ -46,7 +46,7 @@ const { data } = await useAsyncGql({
   .contentfood {
     margin-top: 2em;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 3fr 1fr;
     gap: 2em;
     .right {
       direction: rtl;
@@ -77,6 +77,7 @@ const { data } = await useAsyncGql({
       }
     }
     .left {
+
       img {
         width: 100%;
       }

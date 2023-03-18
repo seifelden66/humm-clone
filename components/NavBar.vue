@@ -14,7 +14,7 @@
                 LogosCart/ 
               .text
                 p cart
-            .upitem
+            button.upitem
               .logo
                 LogosLang/
         .contBut 
@@ -45,7 +45,7 @@
             LogosSearch/
               
 </template>
-
+<script setup lang="ts"></script>
 <style lang="scss" scoped>
 .container {
   width: 95%;
