@@ -3,7 +3,7 @@
     
   .overlay 
       
-      NuxtLink(to="/about" class="lin")
+      NuxtLink(:to="localePath('/about')" class="lin")
         .contBut 
             p Know more
 </template>

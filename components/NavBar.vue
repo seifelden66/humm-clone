@@ -1,10 +1,10 @@
 <template lang="pug">
 .container 
     .upper 
-        NuxtLink(to="/")
+        NuxtLink(:to="localePath('/')")
             LogosLogo/ 
         .content
-            NuxtLink.lin(to="/contact" class="upitem")
+            NuxtLink.lin(:to="localePath('/contact')" class="upitem")
               .logo 
                 LogosEmail/ 
               .text
@@ -21,26 +21,26 @@
                 .logo
                   LogosLang2/
         .contBut 
-            NuxtLink.lin(to="contact") {{$t('contact_us')}}
+            NuxtLink.lin(:to="localePath('/contact')") {{$t('contact_us')}}
     .lower 
         .items 
             .item(@click="open") 
                 LogosMenu/
                 h5 {{$t('menu')}}
             .item 
-                NuxtLink.link(to="/food")
+                NuxtLink.link(:to="localePath('/food')")
                     LogosFork/
                     h5 {{$t('food')}} 
             .item 
-                NuxtLink.link(to="/shows")
+                NuxtLink.link(:to="localePath('/shows')")
                     LogosShows/
                     h5 {{$t('shows')}} 
             .item 
-                NuxtLink.link(to="/read")
+                NuxtLink.link(:to="localePath('/read')")
                     LogosSixLines/
                     h5 {{$t('read')}}
             .item 
-                NuxtLink.link(to="/shop")
+                NuxtLink.link(:to="localePath('/shop')")
                     LogosShop4/
                     h5 {{$t('shop')}}
         .srch
@@ -51,6 +51,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 const { t, locale, setLocale } = useI18n();
+const localePath = useLocalePath()
 
 const changeLanguageEN = () => {
   const newLocale = locale === 'en' ? 'ar' : 'en'; 
@@ -60,6 +61,7 @@ const changeLanguageAR = () => {
   const newLocale = locale === 'ar' ? 'en' : 'ar'; 
   setLocale(newLocale); 
 };
+
 </script>
 <style lang="scss" scoped>
 .container {

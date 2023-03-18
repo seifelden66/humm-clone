@@ -2,7 +2,7 @@
 .container
   .nav 
     h1 Food
-    NuxtLink(to="/food" class="lin")
+    NuxtLink(:to="localePath('/food')" class="lin")
       .more 
         h6 more &rarr;
   .articles

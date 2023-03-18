@@ -2,7 +2,7 @@
 .container
     .nav 
         h1 Brands with us
-        NuxtLink(to="/advertise" class="lin")
+        NuxtLink(:to="localePath('/advertise')" class="lin")
             .more 
                 h6 show more
     

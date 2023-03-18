@@ -2,7 +2,7 @@
 .container
     .nav 
       h1 shows
-      NuxtLink(to="/shows" class="lin")
+      NuxtLink(:to="localePath('/shows')" class="lin")
         .more 
           h6 show more
     .articles

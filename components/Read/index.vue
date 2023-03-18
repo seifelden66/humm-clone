@@ -2,7 +2,7 @@
 .container
     .nav 
       h1 Read
-      NuxtLink(to="/read" class="lin")
+      NuxtLink(:to="localePath('/read')" class="lin")
         .more 
           h6 more &rarr;
     .articles

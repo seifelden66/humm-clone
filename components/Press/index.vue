@@ -2,7 +2,7 @@
 .container 
   .nav 
     h1 press
-    NuxtLink(to="/press" class="lin")
+    NuxtLink(:to="localePath('/press')" class="lin")
         .more 
             h6 show more
   .articles

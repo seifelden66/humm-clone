@@ -1,6 +1,6 @@
 export default {
     home: 'الصفحة الرئيسية',
-    contact_us: 'اتصل بنا',
+    contact_us: 'اتصل ',
     about_us: 'عن همم',
     subscribe: 'اشترك',
     cart: 'عربة التسوق',
@@ -10,6 +10,6 @@ export default {
     read: 'قراءة',
     shop: 'المتجر',
     press:'الصحافه',
-    advertise:'اعلن معنا'
+    advertise:'اعلن'
   };
   

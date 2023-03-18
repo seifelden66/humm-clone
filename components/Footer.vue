@@ -11,12 +11,12 @@
             .item
                 LogosFacebook/
         .middle
-            NuxtLink(to='/about' class="lin") {{$t('about_us')}}
-            NuxtLink(to='/press' class="lin") {{$t('press')}}
-            NuxtLink(to='/advertise' class="lin") {{$t('advertise')}} 
-            NuxtLink(to='/contact' class="lin") {{$t('contact_us')}}
+            NuxtLink(:to="localePath('/about')" class="lin") {{$t('about_us')}}
+            NuxtLink(:to="localePath('/press')" class="lin") {{$t('press')}}
+            NuxtLink(:to="localePath('/advertise')" class="lin") {{$t('advertise')}} 
+            NuxtLink(:to="localePath('/contact')" class="lin") {{$t('contact_us')}}
         .right
-            NuxtLink(to="/contact" class="lin")
+            NuxtLink(:to="localePath('/contact')" class="lin")
                 .more 
                     h6 {{$t('subscribe')}}
     .center 

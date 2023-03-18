@@ -1,5 +1,5 @@
 <template lang="pug">
-nuxt-link(to="/advertise" class="lin")
+nuxt-link(:to="localePath('/advertise')" class="lin")
   .container 
       img(src="../../assets/ad2.png")
 </template>

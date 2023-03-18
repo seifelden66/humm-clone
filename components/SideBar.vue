@@ -10,19 +10,19 @@ div
           LogosCross
         ul.list
           li.listItem
-            nuxt-link(to="/" class="lin" ) {{$t('home')}}
+            nuxt-link(:to="localePath('/')" class="lin" ) {{$t('home')}}
           li.listItem
-            nuxt-link(to="/food" class="lin" ) {{$t('food')}}
+            nuxt-link(:to="localePath('/food')" class="lin" ) {{$t('food')}}
           li.listItem
-            nuxt-link(to="/shows" class="lin" ) {{$t('shows')}}
+            nuxt-link(:to="localePath('/shows')" class="lin" ) {{$t('shows')}}
           li.listItem
-            nuxt-link(to="/read" class="lin" ) {{$t('read')}}
+            nuxt-link(:to="localePath('/read')" class="lin" ) {{$t('read')}}
           li.listItem
-            nuxt-link(to="/Press" class="lin" ) {{$t('press')}}
+            nuxt-link(:to="localePath('/press')" class="lin" ) {{$t('press')}}
           li.listItem
-            nuxt-link(to="/about" class="lin" ) {{$t('about_us')}}
+            nuxt-link(:to="localePath('/about')" class="lin" ) {{$t('about_us')}}
           li.listItem
-            nuxt-link(to="/contact" class="lin" ) {{$t('read')}}
+            nuxt-link(:to="localePath('/contact')" class="lin" ) {{$t('contact_us')}}
 
 </template>
 <script setup lang="ts">

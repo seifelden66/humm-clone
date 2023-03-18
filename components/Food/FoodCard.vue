@@ -1,6 +1,6 @@
 <template lang="pug">
 .card(v-for="i in data.Article")
-    NuxtLink(:to="'/food/'+i.slug" class="lin")
+    NuxtLink(:to="localePath('/food/'+i.slug)" class="lin")
         .image
             img(:src="'https://board.humm.world/assets/'+i.translations[0].cover.id")
         .cat(v-for="item in i.category")

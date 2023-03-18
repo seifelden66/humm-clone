@@ -20,7 +20,7 @@
             p
                 LogosClock/ {{ i.date_created_func.day }} / {{ i.date_created_func.month }} / {{ i.date_created_func.year }}
         .left
-          NuxtLink.images(to="/advertise") 
+          NuxtLink.images(:to="localePath('/advertise')") 
             img(src="../.././assets/images/ad1.png")
             img(src="../.././assets/images/ad2.png")  
       

@@ -3,7 +3,7 @@
     .right
         h1 A world for food and its lovers
         p HUMM is a world for all things food and food-here you will find every thing you need to make an amazing food, to find incredible gifts 
-        NuxtLink(to="/about" class="lin")
+        NuxtLink(:to="localePath('/about')" class="lin")
             .more 
                 h6 about HUMM
     .left 
