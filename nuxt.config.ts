@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             GQL_HOST: 'https://board.humm.world/graphql',
+            defaultLocale: 'en',
         }
     },
     modules: [
@@ -19,19 +20,16 @@ export default defineNuxtConfig({
               code: 'en',
               name: 'English',
               iso: 'en-US',
-              file: 'en.js',
+              file: 'en.ts',
             },
             {
               code: 'ar',
               name: 'Arabic',
               iso: 'ar-AR',
-              file: 'ar.js',
+              file: 'ar.ts',
             },
           ],
-          defaultLocale: 'en',
-          vueI18n: {
-            fallbackLocale: 'en',
-          },
+          
           lazy: true,
           langDir: 'lang/',
       
