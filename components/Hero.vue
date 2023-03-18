@@ -10,6 +10,8 @@
 
 <style lang="scss" scoped>
 .container-fluid {
+  width: 90%;
+  margin: 0 auto;
   background-image: url("../assets/image2.jpeg");
   background-color: rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
@@ -69,6 +71,7 @@
 @media (max-width: 992px) {
   .container-fluid {
     height: 70vh;
+    width: 100%;
     .overlay {
       font-size: 8px;
       width: 280px;

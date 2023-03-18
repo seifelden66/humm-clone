@@ -10,21 +10,25 @@ div
           LogosCross
         ul.list
           li.listItem
-            nuxt-link(to="/" class="lin" ) Home
+            nuxt-link(to="/" class="lin" ) {{$t('home')}}
           li.listItem
-            nuxt-link(to="/food" class="lin" ) Food
+            nuxt-link(to="/food" class="lin" ) {{$t('food')}}
           li.listItem
-            nuxt-link(to="/shows" class="lin" ) Shows
+            nuxt-link(to="/shows" class="lin" ) {{$t('shows')}}
           li.listItem
-            nuxt-link(to="/read" class="lin" ) Read
+            nuxt-link(to="/read" class="lin" ) {{$t('read')}}
           li.listItem
-            nuxt-link(to="/Press" class="lin" ) Press
+            nuxt-link(to="/Press" class="lin" ) {{$t('press')}}
           li.listItem
-            nuxt-link(to="/about" class="lin" ) about us
+            nuxt-link(to="/about" class="lin" ) {{$t('about_us')}}
           li.listItem
-            nuxt-link(to="/contact" class="lin" ) contact
+            nuxt-link(to="/contact" class="lin" ) {{$t('read')}}
 
 </template>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+</script>
 <style lang="scss" scoped>
 .animate__animated.animate__slideInLeft,
 .animate__animated.animate__slideOutLeft{
@@ -67,7 +71,6 @@ div
         }
       }
     
-      // Target router-link-active class
       
     }
   }

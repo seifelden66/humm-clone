@@ -21,6 +21,7 @@ const props = defineProps(["data", "limit"]);
 
 <style lang="scss" scoped>
 .card {
+  
   width: 100%;
   margin-top: 1em;
   
@@ -40,7 +41,6 @@ const props = defineProps(["data", "limit"]);
       color: #000;
       img {
         width: 100%;
-        height: 80vh;
         object-fit: cover;
       }
 
@@ -78,7 +78,13 @@ const props = defineProps(["data", "limit"]);
 }
 @media (max-width:992px) {
   .container{
-    width: 90%;
-  }
+    width: 80%;
+    .image{
+      
+    img{
+      
+      height: 400px;
+    }
+  }}
 }
 </style>

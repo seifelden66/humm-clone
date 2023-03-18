@@ -36,9 +36,10 @@ const { data } = await useAsyncGql({
 <style lang="scss">
 .container {
   margin-top: 3em;
+  margin-bottom: 10em;
   .video {
     .frame {
-      height: 500px;
+      height: 450px;
       width: 100%;
     }
   }
@@ -80,7 +81,8 @@ const { data } = await useAsyncGql({
       }
     }
     .left {
-      height: 30vh;
+      
+      height: 200px;
       img {
         height: 100%;
         width: 100%;
@@ -89,7 +91,7 @@ const { data } = await useAsyncGql({
   }
 
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .container {
     .contentfood {
       display: grid;

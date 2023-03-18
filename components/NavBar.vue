@@ -8,44 +8,59 @@
               .logo 
                 LogosEmail/ 
               .text
-                p subscribe
+                p {{$t('subscribe')}}
             .upitem
               .logo
                 LogosCart/ 
               .text
-                p cart
-            button.upitem
+                p {{ $t('cart') }}
+            button.upitem(@click="changeLanguageEN") 
               .logo
                 LogosLang/
+            button.upitem(@click="changeLanguageAR") 
+                .logo
+                  LogosLang2/
         .contBut 
-            NuxtLink.lin(to="contact") contact us
+            NuxtLink.lin(to="contact") {{$t('contact_us')}}
     .lower 
         .items 
             .item(@click="open") 
                 LogosMenu/
-                h5 Menu
+                h5 {{$t('menu')}}
             .item 
                 NuxtLink.link(to="/food")
                     LogosFork/
-                    h5 Food 
+                    h5 {{$t('food')}} 
             .item 
                 NuxtLink.link(to="/shows")
                     LogosShows/
-                    h5 Shows 
+                    h5 {{$t('shows')}} 
             .item 
                 NuxtLink.link(to="/read")
                     LogosSixLines/
-                    h5 Read
+                    h5 {{$t('read')}}
             .item 
                 NuxtLink.link(to="/shop")
                     LogosShop4/
-                    h5 Shop
+                    h5 {{$t('shop')}}
         .srch
             input(placeholder="search")
             LogosSearch/
               
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+const { t, locale, setLocale } = useI18n();
+
+const changeLanguageEN = () => {
+  const newLocale = locale === 'en' ? 'ar' : 'en'; 
+  setLocale(newLocale); 
+};
+const changeLanguageAR = () => {
+  const newLocale = locale === 'ar' ? 'en' : 'ar'; 
+  setLocale(newLocale); 
+};
+</script>
 <style lang="scss" scoped>
 .container {
   width: 95%;
@@ -77,6 +92,10 @@
         text-decoration: none;
         color: inherit;
       }
+    }
+    button{
+      border: none;
+      background: inherit;
     }
     .upitem {
       display: flex;

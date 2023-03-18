@@ -1,6 +1,6 @@
 <template lang="pug">
 NuxtLink(to="/advertise" class="lin")
-    .container-fluid
+    .container
         LogosBomb/
         LogosSayCheese/
         LogosSoTasty/
@@ -28,7 +28,7 @@ NuxtLink(to="/advertise" class="lin")
     }
   }
 
-.container-fluid{
+.container{
     display: flex;
     color: #fff;
     justify-content: space-between;

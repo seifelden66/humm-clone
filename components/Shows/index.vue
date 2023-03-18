@@ -1,5 +1,5 @@
 <template lang="pug">
-.container-fluid
+.container
     .nav 
       h1 shows
       NuxtLink(to="/shows" class="lin")
@@ -19,7 +19,8 @@ const { data } = await useAsyncGql({
 
 <style lang="scss" scoped>
 
-.container-fluid{
+.container{
+  
     padding: 0;
     padding-bottom: 1em;
     color: #fff;
@@ -75,7 +76,7 @@ const { data } = await useAsyncGql({
 
  
   @media (max-width:992px) {
-    .container-fluid{
+    .container{
       .articles{
         display: grid;
         grid-template-columns: 1fr;

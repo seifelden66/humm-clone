@@ -11,14 +11,14 @@
             .item
                 LogosFacebook/
         .middle
-            NuxtLink(to='/about' class="lin") about us
-            NuxtLink(to='/press' class="lin") press
-            NuxtLink(to='/advertise' class="lin") advertise 
-            NuxtLink(to='/contact' class="lin") contact
+            NuxtLink(to='/about' class="lin") {{$t('about_us')}}
+            NuxtLink(to='/press' class="lin") {{$t('press')}}
+            NuxtLink(to='/advertise' class="lin") {{$t('advertise')}} 
+            NuxtLink(to='/contact' class="lin") {{$t('contact_us')}}
         .right
             NuxtLink(to="/contact" class="lin")
                 .more 
-                    h6 subscribe
+                    h6 {{$t('subscribe')}}
     .center 
         NuxtLink(to="/" class="lin")
             LogosLogo/
@@ -34,7 +34,10 @@
 
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+</script>
 <style lang="scss" scoped>
 .container {
   border-top: #000 1px solid;

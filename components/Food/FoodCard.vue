@@ -26,8 +26,8 @@ const props = defineProps(["data"]);
     position: relative;
     text-decoration: none;
     color: inherit;
-    padding: 1em;
-    height: 50vh;
+    padding: 10px;
+    height: 300px;
     transition: 350ms;
     &:hover {
       text-decoration: none;
