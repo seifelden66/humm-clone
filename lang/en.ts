@@ -10,6 +10,7 @@ export default {
     read: 'Read',
     shop: 'Shop',
     press: 'press',
-    advertise:'advertise'
+    advertise:'advertise',
+
   };
   

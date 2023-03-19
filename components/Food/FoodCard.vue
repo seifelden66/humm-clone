@@ -3,8 +3,6 @@
     NuxtLink(:to="localePath('/food/'+i.slug)" class="lin")
         .image
             img(:src="'https://board.humm.world/assets/'+i.translations[0].cover.id")
-        .cat(v-for="item in i.category")
-            h6 {{ item }}
         h4 {{ i.slug }}
       
           

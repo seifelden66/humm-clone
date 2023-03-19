@@ -1,4 +1,4 @@
-query humm ($limit: Int){
+query humm($limit: Int) {
   Article(limit: $limit, filter: {type: {_eq: "food"}}) {
     slug
     video
@@ -6,21 +6,26 @@ query humm ($limit: Int){
       first_name
       last_name
     }
-     date_created_func {
+    date_created_func {
       day
       month
       year
     }
     translations {
+      title
+      content
       cover {
         id
       }
-      title
-      content
     }
     category {
       slug
+      translations {
+        title
+        cover {
+          id
+        }
+      }
     }
-    
   }
 }

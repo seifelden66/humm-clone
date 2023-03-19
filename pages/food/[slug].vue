@@ -7,9 +7,9 @@
       .contentfood
         
         .right
-          .cat(v-for="item in i.category")
-              NuxtLink(:to="'/food/'+item" class="but")
-                p {{ item }}
+          .cat
+              NuxtLink(:to="'/food/'+i.category.slug" class="but")
+                p {{ i.category.slug }}
           .cont 
             h2 {{ i.translations[0].title}}
             .htm(v-html="i.translations[0].content")

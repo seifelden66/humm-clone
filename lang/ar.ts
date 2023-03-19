@@ -10,6 +10,7 @@ export default {
     read: 'قراءة',
     shop: 'المتجر',
     press:'الصحافه',
-    advertise:'اعلن'
+    advertise:'اعلن',
+    
   };
   
