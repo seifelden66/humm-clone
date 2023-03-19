@@ -23,7 +23,7 @@
               NuxtLink.images(to="/advertise") 
                 img(src="../../../assets/images/ad1.png")
                 img(src="../../../assets/images/ad2.png")
-                  </template>
+</template>
 
 <script setup lang="ts">
 const route = useRoute();
@@ -37,6 +37,7 @@ const { data } = await useAsyncGql({
 <style lang="scss">
 .container {
   margin-top: 3em;
+  margin-bottom: 2em;
   .video {
     .frame {
       height: 500px;
@@ -47,6 +48,7 @@ const { data } = await useAsyncGql({
     margin-top: 2em;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    height: 300px;
     gap: 2em;
     .right {
       direction: rtl;

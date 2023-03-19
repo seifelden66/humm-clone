@@ -23,7 +23,15 @@ div
             nuxt-link(:to="localePath('/about')" class="lin" ) {{$t('about_us')}}
           li.listItem
             nuxt-link(:to="localePath('/contact')" class="lin" ) {{$t('contact_us')}}
-
+          .social 
+            .it
+              LogosFacebook/
+            .it
+                LogosInsta/
+            .it
+                LogosTwitter/
+            .it
+                LogosYoutube
 </template>
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
@@ -35,22 +43,37 @@ const { t } = useI18n();
     animation-duration: 600ms;
   }
 .side {
+  font-size: 26px;
   background: #000;
   color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 200px;
+  width: 270px;
   z-index: 999;
   padding: 1em;
+  .social{
+    margin-top: 30px;
+    display: flex;
+    gap: 5px;
+    font-size: 18px;
+    .it{
+      &:hover{
+        text-decoration: none;
+        color: rgb(221, 59, 86);
+        cursor: pointer;
+      }
+    }
+   
+  }
   
   button {
     font-size:30px;
     border: none;
     background: #000;
     color: #fff;
-    transform: translatex(130px);
+    transform: translatex(180px);
   }
   .list {
     list-style: none;
@@ -70,8 +93,6 @@ const { t } = useI18n();
           color: rgb(221, 59, 86);
         }
       }
-    
-      
     }
   }
 }
