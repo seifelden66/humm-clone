@@ -14,7 +14,7 @@
                     h6 {{ i.all_episodes_func.count }} episodes
             .episodes 
                 div(v-for="item in i.all_episodes")
-                  NuxtLink.card(:to="'/shows/' + i.slug + '/' + item.slug")  
+                  NuxtLink.card(:to="localePath('/shows/'+i.slug + '/' + item.slug)")
                     img(:src="'https://board.humm.world/assets/' + item.translations[0].cover.id") 
                     .cardcontent(v-if="item.translations[0]")
                       .button

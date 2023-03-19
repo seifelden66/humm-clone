@@ -10,7 +10,7 @@
             
             .right
               .cat
-                NuxtLink(:to="'/shows/'+i.slug" class="but")
+                NuxtLink(:to="localePath('/food/'+i.slug)"  class="but")
                   p {{ i.slug }}
               .cont 
                 h1 {{ item.translations[0].title}}
