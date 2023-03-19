@@ -12,58 +12,36 @@
             p
                 LogosClock/ {{ i.date_created_func.day }} / {{ i.date_created_func.month }} / {{ i.date_created_func.year }}
 </template>
-    
-    <script setup lang="ts">
-    const props = defineProps(["data"]);
 
+<script setup lang="ts">
+const props = defineProps(["data"]);
 </script>
 
 <style lang="scss" scoped>
-
 .card {
-  
+  direction: rtl;
+  margin: 0 auto;
+  border: 1px black solid;
+  padding: 10px;
+  height: 370px;
+  border-radius: 0;
+  transition: 350ms;
   .lin {
-    position: relative;
+    color: black;
     text-decoration: none;
-    color: inherit;
-    padding: 1em;
-    height: 50vh;
-    &:hover {
-      text-decoration: none;
-      box-shadow: 5px 5px #000;
-    }
-    border: #000 solid 1px;
-
-    .image {
-      width: 100%;
-      height: 35vh;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    
-      .but {
-        width: 100%;
+    .cont{
+      text-align: right;
+      margin-top: 4px;
+      padding: 0;
+      h4{
         margin: 0;
-
-        border-radius: 20px;
-        padding: 0px 10px;
-        text-decoration: none;
-        color: inherit;
-        transition: 300ms;
-        &:hover {
-          text-decoration: none;
-          color: white;
-          background: #000;
-        
+        font-weight: 800;
       }
-      h6 {
-        font-size: 14px;
-        display: flex;
-        align-self: center;
-        margin-top: 5px;
+    }
+    .image {
+      img {
+        height: 100%;
+        width: 100%;
       }
     }
     .btm {
@@ -81,16 +59,19 @@
       }
     }
   }
+  &:hover {
+    box-shadow: 5px 5px black;
+  }
 }
-
 @media (max-width: 992px) {
   .card {
+    height: 340px;
+    width: 100%;
     .lin {
-      min-height: max-content;
-      height: 60vh;
+      width: 100%;
       .image {
+        height: 200px;
         width: 100%;
-        height: 35vh;
         img {
           width: 100%;
           height: 100%;
@@ -100,5 +81,7 @@
     }
   }
 }
-    </style>
-    
+</style>
+
+
+

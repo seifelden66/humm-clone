@@ -9,7 +9,7 @@
           p no image
             
         .cont
-            h4 {{ i.slug }}
+            h4 {{ i.translations[0].title }}
             p(v-if="i.translations[0].description") {{ i.translations[0].description}}
             p(v-else-if="i.translations[1].description") {{ i.translations[1].description}} 
             p(v-else) no content
@@ -49,6 +49,9 @@ const props = defineProps(["data"]);
         display: flex;
         align-items: center;
         font-size: 14px;
+      }
+      h4{
+        font-weight: 800;
       }
     }
 

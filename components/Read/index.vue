@@ -1,73 +1,69 @@
 <template lang="pug">
 .container
-    .nav 
-      h1 Read
-      NuxtLink(:to="localePath('/read')" class="lin")
-        .more 
-          h6 more &rarr;
-    .articles
-        ReadCard(:data="data" class="article")
+  .nav 
+    h1 Read
+    NuxtLink(:to="localePath('/read')" class="lin")
+      .more 
+        h6 more &rarr;
+  .articles
+      ReadCard(:data="data" class="article")
 </template>
 <script lang="ts" setup>
 const { data } = await useAsyncGql({
-  operation: 'read',
+  operation: "read",
   variables: { limit: 2 },
 });
 </script>
 <style lang="scss" scoped>
 .container{
-  margin-top: 3em;
-    color: #000;
-    .nav{
-      margin-bottom: 1em;
-      display: flex;
-      justify-content: space-between;
-      .lin {
-        text-decoration: none;
-        color: inherit;
-    
-        &:hover {
-          text-decoration: none;
-          color: inherit;
-        }
-    
-
+  margin: 0 auto;
+  margin-top: 50px;
+  .nav{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    .lin{
+      text-decoration: none;
       
       .more{
-        border: black solid 1px;
-      box-shadow: 5px 5px #000;
-      border-radius: 0px;
-      padding: 5px 20px;
-      h6{
-        margin: 0;
-      }
-      transition: 300ms;
-      &:hover{
-          background-color: #000;
-          color: #fff;
-          cursor: pointer;
-      }
+        background: #000;
+        color: white;
+        width: 100px;
+        padding: 5px;
+        text-align: center;
+        box-shadow: #000 5px 5px;
+        border:1px solid white;
+        transition: 350ms;
         
+        h6{
+          margin: 0;
+        }
+        &:hover{
+          background: #fff;
+          color: #000;
+          border: #000 1px solid;
+          
+        }
       }
     }
-    }
-    
-    .articles{
+  }
+  .articles{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+@media (max-width: 786px) {
+  .container {
+ .nav{
+  margin: 0 auto;
+ }
+    .articles {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px; 
+      grid-template-columns: 1fr;
+      gap: 10px;
     }
   }
-  
-
-  @media (max-width:768px) {
-    .container{
-      .articles{
-        display: grid;
-        grid-template-columns:  1fr;
-        gap: 10px; 
-      }
-    }
-  }
-  
+}
 </style>

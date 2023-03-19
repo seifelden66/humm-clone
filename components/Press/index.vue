@@ -20,7 +20,8 @@ const { data } =await useAsyncGql({
 </script>
 <style lang="scss" scoped>
 .container{
-  margin-top: 5em;
+  margin: 0px auto;
+  margin-top: 50px;
   color: #000;
   .nav{
     margin: 0;

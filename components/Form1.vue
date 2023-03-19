@@ -13,30 +13,34 @@
 
 </template>
 
-
-
 <style scoped lang="scss">
 .container {
+  width: 86%;
+  margin: 0px auto;
+  margin-top: 50px;
   gap: 5em;
-  padding: 2em;
+  padding:4em 20px ;
   align-items: center;
   color: black;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 2em;
-  box-shadow: 5px 5px #000;
+  box-shadow: 10px 10px #000;
   border: 1px solid black;
-  .left{
+  .left {
     margin: 0;
+    h1{font-weight: 800}
   }
   .right {
     margin: 0;
+    h3{
+      font-weight: 600;
+    }
     .frm {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1em;
       align-items: center;
-      input{
+      input {
         height: 1em;
         padding: 1em;
         border: #000 solid 1px;
@@ -61,21 +65,31 @@
     }
   }
 }
-@media (max-width:992px) {
-.container{
-  gap: 1em;
+@media (max-width: 992px) {
+  .container {
+    width: 90%;
+    gap: 1em;
     font-size: 12px;
     display: grid;
     grid-template-columns: 1fr;
-    width: 90%;
-    
-    .right{
-       .frm{
-        display: grid;
-        grid-template-columns: 2fr ;
-       }
+    .left{
+      h1{
+        font-weight: 600;
+        font-size: 30px;
+      }
     }
-}
-
+    
+    
+    .right {
+      h3{
+        font-weight: 400;
+        font-size: 25px;
+      }
+      .frm {
+        display: grid;
+        grid-template-columns: 2fr;
+      }
+    }
+  }
 }
 </style>

@@ -10,14 +10,12 @@
 
 <style lang="scss" scoped>
 .container-fluid {
-  width: 90%;
   margin: 0 auto;
-  background-image: url("../assets/image2.jpeg");
-  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("https://board.humm.world/assets/ac08abd1-d24d-4d1b-aa18-dc5911920b02?fit=cover&width=1550&height=550&quality=80&format=webp");
   background-repeat: no-repeat;
   background-blend-mode: overlay;
   background-size: cover;
-  height: 70vh;
+  height: 80vh;
   color: #000;
   margin-top: 0.2em;
   position: relative;
@@ -25,11 +23,11 @@
   .overlay {
 
     position: absolute;
-    margin-top: 30vh;
+    margin-top: 40vh;
     margin-bottom: 5vh;
     background: #fff;
     width: 400px;
-    left: 4vw;
+    left: 7vw;
     padding: 2.5em 3em;
     
     &::before {

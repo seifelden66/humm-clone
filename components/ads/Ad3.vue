@@ -12,11 +12,12 @@
 </template>
 <style lang="scss" scoped>
 .container {
+  margin: 0 auto;
+  margin-top: 50px;
   align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2em;
-  margin-top: 2em;
   color: black;
   .right {
     .lin {

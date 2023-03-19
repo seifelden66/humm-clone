@@ -1,5 +1,5 @@
 <template lang="pug">
-.container-fluid
+.container
     div(v-for="i in data.shows")
         div(v-if="i.slug === namee")
             .containImg
@@ -37,7 +37,7 @@ const { data } = await useAsyncGql({
 </script>
 
 <style lang="scss" scoped>
-.container-fluid {
+.container {
   margin-top: 3em;
   color: rgb(22, 22, 22);
   display: flex;
@@ -46,8 +46,6 @@ const { data } = await useAsyncGql({
   text-align: center;
   align-items: center;
   .containImg {
-    width: 90vw;
-    height: 80vh;
     margin: 0 auto;
     img {
       height: 100%;
@@ -92,6 +90,7 @@ const { data } = await useAsyncGql({
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     .card {
+      height: 200px;
       color: inherit;
       text-decoration: none;
       padding: 1em;
@@ -148,11 +147,10 @@ const { data } = await useAsyncGql({
   }
 }
 @media (max-width: 992px) {
-  .container-fluid {
+  .container {
     font-size: small;
     
     .containImg {
-      width: 90vw;
       height: 40vh;
       margin: 0 auto;
       img {

@@ -20,9 +20,13 @@ const { data } = await useAsyncGql({
 <style lang="scss" scoped>
 
 .container{
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
   color: #000;
   .nav{
-    margin-bottom: 1em;
+    
+
     display: flex;
     justify-content: space-between;
     .lin {
@@ -48,7 +52,7 @@ const { data } = await useAsyncGql({
     }
   }
   }
-  margin-top: 3em;
+  
   .articles{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -58,6 +62,7 @@ const { data } = await useAsyncGql({
 
 @media (max-width:992px) {
   .container{
+    width: 100%;
     .articles{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -66,6 +71,7 @@ const { data } = await useAsyncGql({
   }
 }
 @media (max-width:768px) {
+  
   .container{
     .articles{
       display: grid;
@@ -74,7 +80,7 @@ const { data } = await useAsyncGql({
     }
   }
 }
-@media (max-width:576px) {
+@media (max-width:530px) {
   .container{
     .articles{
       display: grid;

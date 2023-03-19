@@ -65,7 +65,8 @@ const changeLanguageAR = () => {
 </script>
 <style lang="scss" scoped>
 .container {
-  width: 95%;
+  font-size: large;
+  width: 90%;
   margin: 0 auto;
   color: #000;
   display: grid;
@@ -185,7 +186,6 @@ const changeLanguageAR = () => {
     .upper {
       width: 100%;
       display: flex;
-      gap: 3em;
       .content{
         
         gap:5px;

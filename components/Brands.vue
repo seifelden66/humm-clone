@@ -21,10 +21,11 @@ const {data}= await useAsyncGql({
 </script>
 <style lang="scss" scoped>
 .container {
-  margin-top: 5em;
+  margin: 0 auto;
+  margin-top: 50px;
   color: #000;
   .nav {
-    margin-bottom: 1em;
+
     display: flex;
     justify-content: space-between;
     .lin {
