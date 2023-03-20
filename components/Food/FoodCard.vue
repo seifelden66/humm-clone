@@ -99,7 +99,7 @@ const props = defineProps(["data"]);
   .card {
     .lin {
       min-height: max-content;
-      height: 400px !important;
+      height: 420px !important;
       .image {
         width: 100%;
         height: fit-content !important;
@@ -135,7 +135,7 @@ const props = defineProps(["data"]);
   .card {
     height: 420px;
     .lin {
-      min-height: max-content;
+      
       
       .image {
         width: 100%;

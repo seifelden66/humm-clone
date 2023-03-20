@@ -65,7 +65,7 @@ const props = defineProps(["data"]);
 }
 @media (max-width: 992px) {
   .card {
-    height: 300px;
+    height: 340px;
     width: 100%;
     .lin {
       width: 100%;
