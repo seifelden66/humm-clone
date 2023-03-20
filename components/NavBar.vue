@@ -261,6 +261,10 @@ const showModal = ref(false);
       justify-content: space-between;
       .srch {
         margin-right: 1em;
+        button{
+          display: flex;
+          align-items: center;
+        }
         .modal{
           
           .con{
@@ -286,11 +290,13 @@ const showModal = ref(false);
 
       }
       .items {
+        margin-top: 5px;
+        font-size: 18px;
         .item:nth-child(1){
           display: flex;
           align-items: center;
           h5{
-            font-size: 15px;
+            font-size: 16px;
             
           }
         }

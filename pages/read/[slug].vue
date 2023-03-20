@@ -13,7 +13,7 @@
             NuxtLink.images(to="/advertise") 
               img(src="../.././assets/images/ad1.png")
               img(src="../.././assets/images/ad2.png")
-    AdsAd1/
+AdsAd1/
             
 </template>
 
@@ -41,7 +41,7 @@ const { data } = await useAsyncGql({
     direction: rtl;
     margin-top: 2em;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
     gap: 1em;
 
     .left {
@@ -60,7 +60,7 @@ const { data } = await useAsyncGql({
         text-align: right;
 
         .con {
-          width: 50vw !important;
+          
           
         
           img {
@@ -77,24 +77,34 @@ const { data } = await useAsyncGql({
 @media (max-width: 768px) {
   .container {
     .video {
-      height: 35vh !important;
+
+      height: 40vh !important;
+      width: 100%;
+      margin: 0 auto;
       img {
         height: 100% !important;
         width: 100%;
       }
     }
     .readContent {
-      
+      margin-bottom: -3em;
+      width: 100%;
+      text-align: right;
+      direction: rtl;
       display: grid;
       grid-template-columns: 1fr !important;
       .left {
-        display: flex;
-        align-items: center;
+        display: grid;
+        place-items: center;
+        place-content: center;
         width: 45vw;
+        margin: 0 auto;
         .images {
-          display: flex;
-          width: 100%;
           margin: 0 auto;
+          gap: 5px;
+          display: flex;
+          justify-content: center;
+          width: 100%;
           img {
             width: 100%;
           }
@@ -104,7 +114,7 @@ const { data } = await useAsyncGql({
         .cont {
           .con {
             margin: 0 auto !important;
-            width: 80vw !important;
+            width: 100% !important;
           }
         }
       }
