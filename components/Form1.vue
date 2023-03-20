@@ -43,7 +43,7 @@
       input {
         height: 1em;
         padding: 1em;
-        border: #000 solid 1px;
+        border: #0000008e solid 1px;
       }
       .more {
         border: black solid 1px;

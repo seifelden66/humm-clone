@@ -11,6 +11,6 @@ export default {
     shop: 'المتجر',
     press:'الصحافه',
     advertise:'اعلن',
-    
+    search:'ابحث'
   };
   

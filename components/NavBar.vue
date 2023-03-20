@@ -44,8 +44,18 @@
                     LogosShop4/
                     h5 {{$t('shop')}}
         .srch
-            input(placeholder="search")
-            LogosSearch/
+          button(@click="showModal = true")
+            h5 {{$t('search')}}
+             LogosSearch/
+          div(v-if="showModal")
+            .modal
+              .con
+                .in
+                  LogosSearch/
+                  input(v-model="searchQuery" placeholder="Search...")
+                .bttn
+                  button(@click="hideModal") 
+                    LogosCross/
               
 </template>
 <script setup lang="ts">
@@ -54,19 +64,23 @@ const { t, locale, setLocale } = useI18n();
 const localePath = useLocalePath()
 
 const changeLanguageEN = () => {
-  const newLocale = locale === 'en' ? 'ar' : 'en'; 
+  const newLocale = locale.value === 'en' ? 'ar' : 'en'; 
   setLocale(newLocale); 
 };
 const changeLanguageAR = () => {
-  const newLocale = locale === 'ar' ? 'en' : 'ar'; 
+  const newLocale = locale.value === 'ar' ? 'en' : 'ar'; 
   setLocale(newLocale); 
 };
+const showModal = ref(false);
+  const searchQuery = ref('');
 
+  function hideModal() {
+    showModal.value = false;
+  }
 </script>
 <style lang="scss" scoped>
 .container {
   font-size: large;
-  width: 90%;
   margin: 0 auto;
   color: #000;
   display: grid;
@@ -166,15 +180,54 @@ const changeLanguageAR = () => {
       justify-content: flex-end;
       right: 0;
       margin-left: auto;
-      input {
-        padding: 5px;
+      button{
         border: none;
-        display: flex;
-        justify-content: flex-end;
-        justify-items: flex-end;
-        text-align: right;
+        background-color: inherit;
       }
-    }
+      
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .con{
+          border: #000 solid 2px;
+          display: flex;
+          background: #fff;
+          height: 35px;
+          width: 50vw;
+          padding: 5px;
+          align-items: center;
+          input{
+            align-items: center;
+            border: none;
+            width:45vw;
+          }
+          button{
+            padding: 3px;
+            padding-left: 30%;
+            border: none;
+            border-left: 2px  solid rgba(0, 0, 0);
+            height: 100%;
+            background-color: inherit;
+          }
+        }
+        
+        
+      }
+    
+      .modal-content {
+        display: flex;
+        width: 50%;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 4px;
+      }}
   }
 }
 @media (max-width: 768px) {
@@ -208,6 +261,29 @@ const changeLanguageAR = () => {
       justify-content: space-between;
       .srch {
         margin-right: 1em;
+        .modal{
+          
+          .con{
+            font-size: 16px;
+            height: 40px;
+            width: 80vw;
+            input{
+              width: 60vw;
+            }
+            button{
+              font-size: 20px;
+              margin: 0;
+              padding: 5px;
+              padding-left: 50%;
+              border: none;
+              border-left: 2px  solid rgba(0, 0, 0);
+              height: 100%;
+              background-color: inherit;
+            }
+          }
+          
+        }
+
       }
       .items {
         .item:nth-child(1){

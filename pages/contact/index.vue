@@ -71,6 +71,10 @@
       .item {
         display: flex;
         flex-direction: column;
+        input, textarea{
+          padding: 5px;
+          border: #00000075 1px solid;
+        }
       }
     }
     .area {
