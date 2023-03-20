@@ -97,12 +97,13 @@ const props = defineProps(["data"]);
 
 @media (max-width: 768px) {
   .card {
+    height: 400px !important;
     .lin {
       min-height: max-content;
-      height: 420px !important;
+      height: 400px !important;
       .image {
         width: 100%;
-        height: fit-content !important;
+        
         img {
           width: 100%;
           height: 100%;
@@ -133,13 +134,13 @@ const props = defineProps(["data"]);
 }
 @media (max-width: 576px) {
   .card {
-    height: 420px;
+    height: 410px !important;
     .lin {
-      
+      height: 410px !important;
       
       .image {
         width: 100%;
-        height: 33vh;
+        height: 220px;
         img {
           width: 100%;
           height: 100%;

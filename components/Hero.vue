@@ -68,7 +68,7 @@
 }
 @media (max-width: 992px) {
   .container-fluid {
-    height: 70vh;
+    height: 500px;
     width: 100%;
     .overlay {
       font-size: 8px;
@@ -106,7 +106,7 @@
 }
 @media (max-width: 576px) {
   .container-fluid {
-    height: 50vh;
+    height: 400px;
     .overlay {
       font-size: 8px;
       width: 280px;
