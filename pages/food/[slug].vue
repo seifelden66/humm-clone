@@ -44,6 +44,7 @@ const { data } = await useAsyncGql({
     }
   }
   .contentfood {
+    height: fit-content;
     margin-top: 2em;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -82,7 +83,7 @@ const { data } = await useAsyncGql({
     }
     .left {
       
-      height: 200px;
+      height: 170px;
       img {
         height: 100%;
         width: 100%;
@@ -94,6 +95,7 @@ const { data } = await useAsyncGql({
 @media (max-width: 992px) {
   .container {
     .contentfood {
+      height: fit-content;
       display: grid;
       grid-template-columns: 1fr;
       .left{
@@ -102,7 +104,7 @@ const { data } = await useAsyncGql({
         margin: 0 auto;
         .images{
           display: grid;
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr 1fr;
         img{
           width: 100%;
           margin: 0;

@@ -57,6 +57,15 @@ const { data } = await useAsyncGql({
       align-items: right;
       align-self: right;
       text-align: right;
+      .btm{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        p{
+          display: flex;
+          align-items: center;
+        }
+      }
       .cat {
         border: 1px black solid;
         border-radius: 5em;
@@ -89,16 +98,17 @@ const { data } = await useAsyncGql({
 @media (max-width: 992px) {
   .container {
     .contentfood {
+      height: auto;
       display: grid;
       grid-template-columns: 1fr;
       .left{
-        width: 80vw !important;
+        width: 90vw !important;
         margin: 0 auto;
         .images{
           display: grid;
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr 1fr;
         img{
-          width: 100%;
+          width: 50%;
           margin: 0;
         }}
       }
