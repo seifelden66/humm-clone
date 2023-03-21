@@ -1,16 +1,28 @@
 <template lang="pug">
 .card(v-for="i in data.Article")
     NuxtLink(:to="i.press_link" class="lin")
-        .image
+        .image(v-if="i.slug.includes('press')")
             img(:src="'https://board.humm.world/assets/'+i.translations[1].cover.id")
             .overlay
                 .cont
-                    h3 {{i.translations[1]?.description}}
-                    h3 {{i.translations[1]?.title}}
+                    h3 {{i.translations[1].description}}
+                    h3 {{i.translations[1].title}}
                 .date
                     h4 {{ i.date_created_func.day }}/{{ i.date_created_func.month }}/{{ i.date_created_func.year }}
                     LogosClock/ 
                 
+        
+        .image(v-else) 
+            img(:src="'https://board.humm.world/assets/'+i.translations[0].cover.id")
+            .overlay
+              .cont
+                  h3 {{i.translations[0]?.description}}
+                  h3 {{i.translations[0]?.title}}
+              .date
+                  h4 {{ i.date_created_func.day }}/{{ i.date_created_func.month }}/{{ i.date_created_func.year }}
+                  LogosClock/ 
+            
+        
             
 
 </template>

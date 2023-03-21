@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-const limit = ref(2);
+const limit = ref(3);
 const { data } =await useAsyncGql({
     operation: "press",
     variables: { limit },
@@ -59,15 +59,6 @@ const { data } =await useAsyncGql({
 }
 
 
-@media (max-width:992px) {
-  .container{
-    .articles{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px; 
-    }
-  }
-}
 @media (max-width:576px) {
   .container{
     .articles{
