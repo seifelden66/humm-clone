@@ -1,7 +1,7 @@
 <template lang="pug">
 .card(v-for="i in data.Article")
     NuxtLink(:to="i.press_link" class="lin")
-        .image(v-if="i.slug.includes('press')")
+        .image(v-if="i.translations[0].title.length <=8 ")
             img(:src="'https://board.humm.world/assets/'+i.translations[1].cover.id")
             .overlay
                 .cont
