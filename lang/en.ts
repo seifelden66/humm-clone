@@ -11,6 +11,7 @@ export default {
     shop: 'Shop',
     press: 'press',
     advertise:'advertise',
-    search: 'search'
+    search: 'search',
+    tranlate:'AR'
   };
   

@@ -17,7 +17,8 @@
             button.upitem(@click="changeLanguageEN") 
               .logo
                 LogosTranslations/
-            
+              .text
+                p {{ $t('tranlate') }}
         .contBut 
             NuxtLink.lin(:to="localePath('/contact')") {{$t('contact_us')}}
     .lower 
