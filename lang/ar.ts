@@ -12,6 +12,6 @@ export default {
     press:'الصحافه',
     advertise:'اعلن',
     search:'ابحث', 
-    tranlate:"EN"
+    translate:"EN"
   };
   

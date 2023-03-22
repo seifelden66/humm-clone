@@ -58,6 +58,15 @@ const { data } =await useAsyncGql({
   }
 }
 
+@media (max-width:992px) {
+  .container{
+    .articles{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px; 
+    }
+  }
+}
 
 @media (max-width:576px) {
   .container{

@@ -12,6 +12,6 @@ export default {
     press: 'press',
     advertise:'advertise',
     search: 'search',
-    tranlate:'AR'
+    translate:'AR'
   };
   
