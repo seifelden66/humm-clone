@@ -16,10 +16,8 @@
                 p {{ $t('cart') }}
             button.upitem(@click="changeLanguageEN") 
               .logo
-                LogosLang/
-            button.upitem(@click="changeLanguageAR") 
-                .logo
-                  LogosLang2/
+                LogosTranslations/
+            
         .contBut 
             NuxtLink.lin(:to="localePath('/contact')") {{$t('contact_us')}}
     .lower 
@@ -67,10 +65,7 @@ const changeLanguageEN = () => {
   const newLocale = locale.value === 'en' ? 'ar' : 'en'; 
   setLocale(newLocale); 
 };
-const changeLanguageAR = () => {
-  const newLocale = locale.value === 'ar' ? 'en' : 'ar'; 
-  setLocale(newLocale); 
-};
+
 const showModal = ref(false);
   const searchQuery = ref('');
 
