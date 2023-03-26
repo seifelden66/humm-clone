@@ -10,7 +10,7 @@
           
         
         .btm
-            p
+            p(v-if="i.user_updated !== null")
                 LogosPerson/ {{ i.user_updated.first_name  }} {{ i.user_updated.last_name }}
             p
                 LogosClock/ {{ i.date_created_func.day }} / {{ i.date_created_func.month }} / {{ i.date_created_func.year }}
