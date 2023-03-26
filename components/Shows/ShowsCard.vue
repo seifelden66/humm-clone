@@ -1,12 +1,11 @@
 <template lang="pug">
 .card(v-for="i in data.shows")
-    NuxtLink(:to="localePath('/shows/'+i.slug)" class="lin" v-if="i.translations.cover !== null")         
+    NuxtLink(:to="localePath('/shows/'+i.slug)" class="lin" v-if="i.translations.cover !== null")    
         .image(v-if="i.translations[0].cover")
           img(:src="'https://board.humm.world/assets/'+i.translations[0].cover.id")
         .image(v-else-if="i.translations[1].cover") 
           img(:src="'https://board.humm.world/assets/'+i.translations[1].cover.id")
-        .image(v-if="i.translations.cover === null")
-          p no image
+        
             
         .cont(v-if="i.translations.description !== null")
             h4 {{ i.translations[0].title }}
