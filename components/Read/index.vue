@@ -23,6 +23,10 @@ const { data } = await useAsyncGql({
     padding: 0;
     display: flex;
     justify-content: space-between;
+    h1{
+      font-weight: 600;
+      color: #000;
+    }
     .lin{
       text-decoration: none;
       

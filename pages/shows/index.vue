@@ -2,20 +2,18 @@
 .container
     .articles
         ShowsCard(:data="data" class="article")
-    button(@click="incr" class="btn") show more
+
     
     
     </template>
 
 <script lang="ts" setup>
-const limit = ref(2);
+const limit = ref(4);
 const { data } = await useAsyncGql({
   operation: "shows",
   variables: { limit },
 });
-const incr = () => {
-  limit.value = limit.value + 2;
-};
+
 </script>
 
 <style lang="scss" scoped>

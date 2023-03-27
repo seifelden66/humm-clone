@@ -25,6 +25,7 @@ const props = defineProps(["data"]);
   border: 1px black solid;
   padding: 10px;
   height: 370px;
+  width: 100%;
   border-radius: 0;
   transition: 350ms;
   .lin {
@@ -35,11 +36,13 @@ const props = defineProps(["data"]);
       margin-top: 4px;
       padding: 0;
       h4{
-        margin: 0;
+        font-size: 25px;
+        margin-top: 5px;
         font-weight: 800;
       }
     }
     .image {
+      width: 100%;
       img {
         height: 100%;
         width: 100%;
@@ -51,7 +54,8 @@ const props = defineProps(["data"]);
       gap: 1em;
       bottom: 5%;
       p {
-        font-size: 12px;
+        font-weight: 550;
+        font-size: 14px;
         margin: 0;
         display: flex;
         align-items: center;
@@ -73,6 +77,47 @@ const props = defineProps(["data"]);
       .image {
         height: 200px;
         width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 769px) {
+  .card {
+   height: 300px !important;
+    .lin {
+      .image {
+        width: 100%;
+        height: 180px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    
+    font-size: small;
+    height: 320px !important;
+    .lin {
+     .cont{
+      h4{
+        font-size: 22px;
+      }
+     }
+      
+      .image {
+        width: 100%;
+        height: 220px;
         img {
           width: 100%;
           height: 100%;

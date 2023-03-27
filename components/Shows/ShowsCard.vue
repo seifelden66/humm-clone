@@ -1,16 +1,19 @@
 <template lang="pug">
-.card(v-for="i in data.shows")
-    NuxtLink(:to="localePath('/shows/'+i.slug)" class="lin" v-if="i.translations.cover !== null")    
+div(v-for="i in data.shows")
+  .card(v-if="i.translations.description !== null")
+    NuxtLink(:to="localePath('/shows/'+i.slug)" class="lin")         
         .image(v-if="i.translations[0].cover")
           img(:src="'https://board.humm.world/assets/'+i.translations[0].cover.id")
         .image(v-else-if="i.translations[1].cover") 
           img(:src="'https://board.humm.world/assets/'+i.translations[1].cover.id")
-        
+        .image(v-else)
+          p no image
             
-        .cont(v-if="i.translations.description !== null")
+        .cont
             h4 {{ i.translations[0].title }}
             p(v-if="i.translations[0].description") {{ i.translations[0].description}}
             p(v-else-if="i.translations[1].description") {{ i.translations[1].description}} 
+            p(v-else) no content
 
             .plays 
                 LogosPlay/ {{ i.all_episodes_func.count }}
@@ -65,7 +68,7 @@ const props = defineProps(["data"]);
     }
   }
   &:hover {
-    box-shadow: 4px 4px white;
+    box-shadow: 4px 4px rgb(71, 71, 71);
   }
 
   @media only screen and (max-width: 992px) {

@@ -3,17 +3,15 @@
     NuxtLink(:to="localePath('/food/'+i.slug)" class="lin")
         .image
             img(:src="'https://board.humm.world/assets/'+i.translations[0].cover.id")
-        h4 {{ i.translations[0].title.substr(0, 40) + "..." }}
-        .cat
-          NuxtLink(:to="'/food/'+i.category.slug" class="but")
-                h6 {{ i.category.slug }}
-          
-        
-        .btm
-            p(v-if="i.user_updated !== null")
-                LogosPerson/ {{ i.user_updated.first_name  }} {{ i.user_updated.last_name }}
-            p
-                LogosClock/ {{ i.date_created_func.day }} / {{ i.date_created_func.month }} / {{ i.date_created_func.year }}
+            .cat
+              NuxtLink(:to="'/food/'+i.category.slug" class="but")
+                    p {{ i.category.slug }}
+            h5 {{ i.translations[0].title.substr(0, 60) + "..." }}
+            .btm
+                h6(v-if="i.user_updated !== null")
+                    LogosPerson/ {{ i.user_updated.first_name  }} {{ i.user_updated.last_name }}
+                h6
+                    LogosClock/ {{ i.date_created_func.day }} / {{ i.date_created_func.month }} / {{ i.date_created_func.year }}
         </template>
 
 <script setup lang="ts">
@@ -36,9 +34,11 @@ const props = defineProps(["data"]);
       box-shadow: 5px 5px #000;
     }
     border: #000 solid 1px;
-    h4{
+    h5{
+      margin: 0;
+      font-weight: 800;
       direction: rtl;
-
+      font-size: 18px;
     }
     .image {
       width: 100%;
@@ -50,11 +50,12 @@ const props = defineProps(["data"]);
       }
     }
     .cat {
-      
+      margin-top: 5px;
+      margin-bottom: 5px;
       .but {
         width: fit-content;
         padding: 7px;
-        margin-top: 5px;
+        
         border: #000 solid 1px;
         border-radius: 20px;
         display: flex;
@@ -69,7 +70,7 @@ const props = defineProps(["data"]);
           text-decoration: none;
         }
 
-        h6 {
+        p {
           margin: 0;
           font-size: 14px;
           display: flex;
@@ -79,16 +80,18 @@ const props = defineProps(["data"]);
     }
 
     .btm {
-      position: absolute;
       display: flex;
-      justify-content: center;
       flex-direction: column;
-      bottom: 5%;
-      p {
+      gap: 4px;
+      margin-top: 1em;
+      
+      h6 {
+        
+        font-size: 15px;
         margin: 0;
         display: flex;
         align-items: center;
-        color: #585858;
+        color: #7c7c7c;
         gap: 0.2em;
       }
     }
@@ -97,22 +100,23 @@ const props = defineProps(["data"]);
 
 @media (max-width: 768px) {
   .card {
-    height: 400px !important;
     .lin {
       min-height: max-content;
-      height: 400px !important;
+      height: 300px !important;
+      h5{
+        margin: 0;
+        font-weight: 800;
+        direction: rtl;
+        font-size: 17px;
+      }
       .image {
         width: 100%;
-        
+        height: 120px;
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
-      }
-      h4 {
-        margin: 0.25em;
-        font-size: 22px;
       }
       .btm {
         margin-top: 1em;
@@ -132,11 +136,12 @@ const props = defineProps(["data"]);
     }
   }
 }
+
 @media (max-width: 576px) {
   .card {
-    height: 410px !important;
+   
     .lin {
-      height: 410px !important;
+      height: 390px !important;
       
       .image {
         width: 100%;

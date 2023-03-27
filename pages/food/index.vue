@@ -10,13 +10,13 @@
 
 
 <script lang="ts" setup>
-const limit = ref(4);
+const limit = ref(8);
 const { data } = await useAsyncGql({
   operation: "humm",
   variables: { limit },
 });
 const incr = () => {
-  limit.value = limit.value + 8;
+  limit.value = limit.value + 4;
 };
 </script>
 

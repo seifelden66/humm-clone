@@ -13,7 +13,7 @@
 <script setup lang="ts">
 const { data } = await useAsyncGql({
   operation: "shows",
-  variables: { limit: 4 },
+  variables: { limit: 2 },
 });
 </script>
 

@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 const { data } = await useAsyncGql({
   operation: "humm",
-  variables: { limit: 6 },
+  variables: { limit: 8 },
 });
 </script>
 
@@ -29,6 +29,9 @@ const { data } = await useAsyncGql({
 
     display: flex;
     justify-content: space-between;
+    h1{
+      font-weight: 600;
+    }
     .lin {
       text-decoration: none;
       color: inherit;

@@ -74,6 +74,13 @@ const {data}= await useAsyncGql({
 
 @media (max-width: 992px) {
   .container {
+    .nav{
+      margin-bottom: 0.4em;
+      h1{
+        font-size: 28px;
+        font-weight: 600;
+      }
+    }
     .articles {
       display: grid;
       grid-template-columns: repeat(3, 1fr);

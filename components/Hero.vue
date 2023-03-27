@@ -15,7 +15,7 @@
   background-repeat: no-repeat;
   background-blend-mode: overlay;
   background-size: cover;
-  height: 80vh;
+  height: 85vh;
   color: #000;
   margin-top: 0.2em;
   position: relative;
@@ -23,16 +23,16 @@
   .overlay {
 
     position: absolute;
-    margin-top: 40vh;
+    margin-top: 35vh;
     margin-bottom: 5vh;
     background: #fff;
-    width: 400px;
+    width: 500px;
     left: 7vw;
-    padding: 2.5em 3em;
+    padding: 2.5em 1.5em;
     
     &::before {
       content: "A world for  food and its lovers.";
-      font-size: 2rem; 
+      font-size: 2.75rem; 
       font-weight: 550;
       margin: 0.5rem;
     }
@@ -68,12 +68,13 @@
 }
 @media (max-width: 992px) {
   .container-fluid {
-    height: 500px;
+    height: 350px;
     width: 100%;
     .overlay {
-      font-size: 8px;
-      width: 280px;
-      margin-top: 19vh;
+      
+      width: 340px;
+      padding: 1em;
+      margin-top: 23vh;
       margin-bottom: 2vh;
       background: #fff;
       display: flex;
@@ -81,11 +82,12 @@
       justify-content: center;
       &::before {
         content: "A world for  food and its lovers.";
-        font-size: 1.5rem; 
+        font-size: 34px; 
         font-weight: 550;
         margin-left: 0.5rem;
       }
       .contBut {
+        margin-left:10px ;
         border: black solid 1px;
         box-shadow: 5px 5px #000;
         padding: .5em;
@@ -106,11 +108,11 @@
 }
 @media (max-width: 576px) {
   .container-fluid {
-    height: 400px;
+    height: 280px;
     .overlay {
       font-size: 8px;
       width: 280px;
-      margin-top: 19vh;
+      margin-top: 17vh;
       margin-bottom: 2vh;
       background: #fff;
       display: flex;
@@ -123,6 +125,8 @@
         margin-left: 0.5rem;
       }
       .contBut {
+        margin-left: 10px;
+        margin-bottom: 5px;
         border: black solid 1px;
         box-shadow: 5px 5px #000;
         padding: .5em;
