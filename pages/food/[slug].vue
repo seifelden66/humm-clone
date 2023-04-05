@@ -1,29 +1,31 @@
 <template lang="pug">
-.container 
-  div(v-for="i in data.Article")
-    div(v-if="i.slug === namee")
-      .video
-        iframe.frame(:src="'https://www.youtube.com/embed/'+i.video")
-      .contentfood
-        
-        .right
-          .cat
-              NuxtLink(:to="'/food/'+i.category.slug" class="but")
-                p {{ i.category.slug }}
-          .cont 
-            h2 {{ i.translations[0].title}}
-            .htm(v-html="i.translations[0].content")
+Transition(name="fade")
+  div(v-if="show")
+    .container 
+      div(v-for="i in data.Article")
+        div(v-if="i.slug === namee")
+          .video
+            iframe.frame(:src="'https://www.youtube.com/embed/'+i.video")
+          .contentfood
             
-          .btm
-            p
-                LogosPerson/ {{ i.user_updated.first_name  }} {{ i.user_updated.last_name }}
-            p
-                LogosClock/ {{ i.date_created_func.day }} / {{ i.date_created_func.month }} / {{ i.date_created_func.year }}
-        .left
-          NuxtLink.images(:to="localePath('/advertise')") 
-            img(src="../.././assets/images/ad1.png")
-            img(src="../.././assets/images/ad2.png")  
-      
+            .right
+              .cat
+                  NuxtLink(:to="'/food/'+i.category.slug" class="but")
+                    p {{ i.category.slug }}
+              .cont 
+                h2 {{ i.translations[0].title}}
+                .htm(v-html="i.translations[0].content")
+                
+              .btm
+                p
+                    LogosPerson/ {{ i.user_updated.first_name  }} {{ i.user_updated.last_name }}
+                p
+                    LogosClock/ {{ i.date_created_func.day }} / {{ i.date_created_func.month }} / {{ i.date_created_func.year }}
+            .left
+              NuxtLink.images(:to="localePath('/advertise')") 
+                img(src="../.././assets/images/ad1.png")
+                img(src="../.././assets/images/ad2.png")  
+          
 </template>
 
 <script setup lang="ts">
@@ -32,6 +34,10 @@ const namee = route.params.slug;
 const { data } = await useAsyncGql({
   operation: "humm",
 });
+const show = ref(false)
+onMounted(() => {
+      show.value = true;
+    });
 </script>
 <style lang="scss">
 .container {

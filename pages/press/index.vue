@@ -1,8 +1,10 @@
 <template lang="pug">
-.container
-    .articles 
-        PressCard(:data="data" class="article")
-    button(@click="incr" class="btn") show more
+Transition(name="fade")
+  div(v-if="show")
+    .container
+        .articles 
+            PressCard(:data="data" class="article")
+        button(@click="incr" class="btn") show more
 </template>
 <script lang="ts" setup>
 const limit = ref(4);
@@ -10,8 +12,13 @@ const { data } = await useAsyncGql({
   operation: "press",
   variables: { limit },
 });
+const show = ref(false)
+onMounted(() => {
+      show.value = true;
+    });
 const incr = () => {
   limit.value = limit.value + 8;
+  
 };
 </script>
 <style lang="scss" scoped>

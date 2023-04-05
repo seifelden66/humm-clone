@@ -1,19 +1,21 @@
 <template lang="pug">
-.container
-    div(v-for="i in data.Article")
-      div(v-if="i.slug === namee")
-        .video
-          img(:src="'https://board.humm.world/assets/' + i.translations[0].cover.id")
-        .readContent
-          .right
-            .cont 
-              h1 {{ i.translations[0].title}}
-              .con(v-html="i.translations[0].content")
-          .left 
-            NuxtLink.images(to="/advertise") 
-              img(src="../.././assets/images/ad1.png")
-              img(src="../.././assets/images/ad2.png")
-AdsAd1/
+Transition(name="fade")
+  div(v-if="show")
+    .container
+        div(v-for="i in data.Article")
+          div(v-if="i.slug === namee")
+            .video
+              img(:src="'https://board.humm.world/assets/' + i.translations[0].cover.id")
+            .readContent
+              .right
+                .cont 
+                  h1 {{ i.translations[0].title}}
+                  .con(v-html="i.translations[0].content")
+              .left 
+                NuxtLink.images(to="/advertise") 
+                  img(src="../.././assets/images/ad1.png")
+                  img(src="../.././assets/images/ad2.png")
+    AdsAd1/
             
 </template>
 
@@ -23,6 +25,10 @@ const namee = route.params.slug;
 const { data } = await useAsyncGql({
   operation: "read",
 });
+const show = ref(false)
+onMounted(() => {
+      show.value = true;
+    });
 </script>
 
 <style lang="scss">

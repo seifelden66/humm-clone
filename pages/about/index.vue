@@ -1,13 +1,21 @@
 <template lang="pug">
-.container-fluid 
-    .ele
-        .text 
-            h1 welcome to humm !
-        .overlay
-            img(src="../.././assets/magic.png") 
-            h5 HUMM is a world for all things food and lifestyle — here, you’ll find everything you need to make amazing food, to find incredible gifts, to pamper yourself, and to uplift your home. A lot of our products and bundles are imported, so you won’t find them anywhere else — stay tuned as more and more 
-Brands/           
+Transition(name="fade")
+  div(v-if="show")
+    .container-fluid 
+        .ele
+            .text 
+                h1 welcome to humm !
+            .overlay
+                img(src="../.././assets/magic.png") 
+                h5 HUMM is a world for all things food and lifestyle — here, you’ll find everything you need to make amazing food, to find incredible gifts, to pamper yourself, and to uplift your home. A lot of our products and bundles are imported, so you won’t find them anywhere else — stay tuned as more and more 
+    Brands/           
 </template>
+<script setup lang="ts">
+const show = ref(false)
+onMounted(() => {
+      show.value = true;
+    });
+</script>
 <style lang="scss" scoped>
 .container-fluid {
   background-image: url(../../assets/aboutimage.png);

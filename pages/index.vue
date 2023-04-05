@@ -1,5 +1,6 @@
 <template lang="pug">
-.all.animate__animated.animate__fadeIn
+Transition(name="fade")
+  div(v-if="show")
     Hero/
     Food/
     AdsAd1/
@@ -12,7 +13,12 @@
     AdsAd5/
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const show = ref(false)
+onMounted(() => {
+      show.value = true;
+    });
+</script>
 
 <style lang="scss">
 * {
@@ -22,8 +28,6 @@
   font-family: "Plus Jakarta Sans", sans-serif;
   font-family: "Roboto", sans-serif;
 }
-.animate__animated.animate__fadeIn{
-  animation-duration: 700ms;
-}
+
 
 </style>

@@ -1,8 +1,10 @@
 <template lang="pug">
-.container
-    .articles
-        ReadCard(:data="data" class="article")
-    button(@click="inc" class="btn") show more
+Transition(name="fade")
+  div(v-if="show")
+    .container
+        .articles
+            ReadCard(:data="data" class="article")
+        button(@click="inc" class="btn") show more
 </template>
 
 <script lang="ts" setup>
@@ -12,6 +14,10 @@ const { data } = await useAsyncGql({
   operation: "read",
   variables: { limit },
 });
+const show = ref(false)
+onMounted(() => {
+      show.value = true;
+    });
 </script>
 
 <style lang="scss" scoped>

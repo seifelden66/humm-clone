@@ -1,59 +1,67 @@
 <template lang="pug">
-.container 
-    .up
-        .left
-            h1 Expose your brand to millions by advertising on our platform
-            p Humm has nearly 2 million fans and followers — and is growing by the day! They all come here to learn, create, and celebrate the love of food, which makes it the perfect place to advertise about your brand. No matter the size of your company, there’s always a place for you — become a part of HUMM’s conversations with our digital ads that inspire action from our fans and followers! Choose from multiple advertising slots to across our website, with options for customizable articles, detailed product reviews, and visual media. Drop us a line now. 
-        .right 
-            img(src="../.././assets/images/ad3.png")
-    .mid 
-        .card 
-            .image
-                img(src="../.././assets/magic.png")
-            .cont
-                h3 Find the audience that matters to you:
-                p   Our content is created based on our viewer’s interests, behaviors, location, and more. Connect your brand with the people who are driving new behaviors and values that are changing the world.
-            
-        .card 
-            .image
-                img(src="../.././assets/images/fork.svg")
-            .cont
-                h3 Find the audience that matters to you:
-                p   Our content is created based on our viewer’s interests, behaviors, location, and more. Connect your brand with the people who are driving new behaviors and values that are changing the world.
-        .card 
-            .image
-                img(src="../.././assets/images/sixlines.svg")
-            .cont
-                h3 Find the audience that matters to you:
-                p   Our content is created based on our viewer’s interests, behaviors, location, and more. Connect your brand with the people who are driving new behaviors and values that are changing the world.
-        .card 
-            .image
-                img(src="../.././assets/magic.png")
-            .cont
-                h3 Find the audience that matters to you:
-                p   Our content is created based on our viewer’s interests, behaviors, location, and more. Connect your brand with the people who are driving new behaviors and values that are changing the world.
+Transition(name="fade")
+  div(v-if="show")
+    .container 
+        .up
+            .left
+                h1 Expose your brand to millions by advertising on our platform
+                p Humm has nearly 2 million fans and followers — and is growing by the day! They all come here to learn, create, and celebrate the love of food, which makes it the perfect place to advertise about your brand. No matter the size of your company, there’s always a place for you — become a part of HUMM’s conversations with our digital ads that inspire action from our fans and followers! Choose from multiple advertising slots to across our website, with options for customizable articles, detailed product reviews, and visual media. Drop us a line now. 
+            .right 
+                img(src="../.././assets/images/ad3.png")
+        .mid 
+            .card 
+                .image
+                    img(src="../.././assets/magic.png")
+                .cont
+                    h3 Find the audience that matters to you:
+                    p   Our content is created based on our viewer’s interests, behaviors, location, and more. Connect your brand with the people who are driving new behaviors and values that are changing the world.
+                
+            .card 
+                .image
+                    img(src="../.././assets/images/fork.svg")
+                .cont
+                    h3 Find the audience that matters to you:
+                    p   Our content is created based on our viewer’s interests, behaviors, location, and more. Connect your brand with the people who are driving new behaviors and values that are changing the world.
+            .card 
+                .image
+                    img(src="../.././assets/images/sixlines.svg")
+                .cont
+                    h3 Find the audience that matters to you:
+                    p   Our content is created based on our viewer’s interests, behaviors, location, and more. Connect your brand with the people who are driving new behaviors and values that are changing the world.
+            .card 
+                .image
+                    img(src="../.././assets/magic.png")
+                .cont
+                    h3 Find the audience that matters to you:
+                    p   Our content is created based on our viewer’s interests, behaviors, location, and more. Connect your brand with the people who are driving new behaviors and values that are changing the world.
 
-    .form
-        h1 Advertise with Humm
-        .items 
-            .item
-                label(for="full") full name
-                input#full(type="text")
+        .form
+            h1 Advertise with Humm
+            .items 
+                .item
+                    label(for="full") full name
+                    input#full(type="text")
 
-            .item
-                label(for="phone") phone number
-                input#phone(type="number")
-            .item
-                label(for="email") email
-                input#email(type="email")
-            .item
-                label(for="country") country
-                input#country(type="text")
-        .area
-            label(for="message") message
-            textarea#message()
-        button.btn submit
+                .item
+                    label(for="phone") phone number
+                    input#phone(type="number")
+                .item
+                    label(for="email") email
+                    input#email(type="email")
+                .item
+                    label(for="country") country
+                    input#country(type="text")
+            .area
+                label(for="message") message
+                textarea#message()
+            button.btn submit
 </template>
+<script setup lang="ts">
+const show = ref(false)
+onMounted(() => {
+      show.value = true;
+    });
+</script>
 <style lang="scss" scoped>
 .container {
   .up {
