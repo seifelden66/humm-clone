@@ -1,10 +1,8 @@
 <template lang="pug">
-Transition(name="fade")
-  div(v-if="show")
-    .container
-      .articles
-          FoodCard(:data="data" class="article")
-      button(@click="incr" class="btn") show more
+.container
+  .articles
+      FoodCard(:data="data" class="article")
+  button(@click="incr" class="btn") show more
 
 
 </template>
@@ -12,10 +10,7 @@ Transition(name="fade")
 
 
 <script lang="ts" setup>
-const show = ref(false)
-onMounted(() => {
-      show.value = true;
-    });
+
 const limit = ref(8);
 const { data } = await useAsyncGql({
   operation: "humm",

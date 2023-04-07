@@ -1,9 +1,7 @@
 <template lang="pug">
-Transition(name="fade")
-  div(v-if="show")
-    .container
-        .articles
-            ShowsCard(:data="data" class="article")
+.container
+    .articles
+        ShowsCard(:data="data" class="article")
 
         
     
@@ -15,11 +13,6 @@ const { data } = await useAsyncGql({
   operation: "shows",
   variables: { limit },
 });
-const show = ref(false)
-onMounted(() => {
-      show.value = true;
-    });
-
 </script>
 
 <style lang="scss" scoped>

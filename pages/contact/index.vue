@@ -1,41 +1,36 @@
 <template lang="pug">
-Transition(name="fade")
-  div(v-if="show")
-    .container 
-        .left 
-            img(src="../.././assets/images/blackcon.png")
-            .wrld 
-                img(src="../.././assets/images/world.png")
-            .text
-                h2 we are ready to lesten to our food lovers
-                h6 hi.humm.world
-                h6 0100100203
-        .right
-            .items 
-                .item
-                    label(for="full") full name
-                    input#full(type="text", placeholder="full name")
+.container 
+    .left 
+        img(src="../.././assets/images/blackcon.png")
+        .wrld 
+            img(src="../.././assets/images/world.png")
+        .text
+            h2 we are ready to lesten to our food lovers
+            h6 hi.humm.world
+            h6 0100100203
+    .right
+        .items 
+            .item
+                label(for="full") full name
+                input#full(type="text", placeholder="full name")
 
-                .item
-                    label(for="phone") phone number
-                    input#phone(type="number", placeholder="phone number")
-                .item
-                    label(for="email") email
-                    input#email(type="email", placeholder="email")
-                .item
-                    label(for="country") country
-                    input#country(type="text", placeholder="country")
-            .area
-                label(for="message") message
-                textarea#message(placeholder="message")
-            button.btn submit
+            .item
+                label(for="phone") phone number
+                input#phone(type="number", placeholder="phone number")
+            .item
+                label(for="email") email
+                input#email(type="email", placeholder="email")
+            .item
+                label(for="country") country
+                input#country(type="text", placeholder="country")
+        .area
+            label(for="message") message
+            textarea#message(placeholder="message")
+        button.btn submit
 
 </template>
 <script setup lang="ts">
-const show = ref(false)
-onMounted(() => {
-      show.value = true;
-    });
+
 </script>
 <style  lang="scss" scoped>
 .container {
