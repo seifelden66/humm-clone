@@ -1,6 +1,5 @@
 <template lang="pug">
-Transition(name="fade")
-  div(v-if="show")
+div
     Hero/
     Food/
     AdsAd1/
@@ -14,10 +13,7 @@ Transition(name="fade")
 </template>
 
 <script setup lang="ts">
-const show = ref(false)
-onMounted(() => {
-      show.value = true;
-    });
+
 </script>
 
 <style lang="scss">
