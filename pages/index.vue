@@ -33,19 +33,20 @@ onMounted(()=>{
   const boxes = document.querySelectorAll('.box');
   boxes.forEach((box) => {
     gsap.from(box, {
-      autoAlpha:0,
+      autoAlpha:.25,
       ease: "Power2.easeOut",
       stagger: 0.2,
       duration: 0.5,
-      reversed:false,
       scrollTrigger: {
         trigger: box,
         scrub: true,
-        
       },
     });
   });
 }, main.value)
+onUnmounted(() => {
+  ctx.value.revert(); 
+});
 
 
 </script>
