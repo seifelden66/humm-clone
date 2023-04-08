@@ -4,6 +4,9 @@ export default defineNuxtConfig({
 
 
     css: ["bootstrap/dist/css/bootstrap.min.css"],
+    build: {
+        transpile: ['gsap'],
+      },
     runtimeConfig: {
         public: {
             GQL_HOST: 'https://board.humm.world/graphql',

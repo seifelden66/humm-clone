@@ -15,7 +15,7 @@
   text-align: center;
   height: 100vh;
   margin: 0;
-  background: #c90000;
+  background: #630101;
   display: flex;
   flex-direction: column;
   justify-content: center;
