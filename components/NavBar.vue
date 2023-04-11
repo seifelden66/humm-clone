@@ -1,7 +1,7 @@
 <template lang="pug">
 .container 
     .upper 
-        NuxtLink(:to="localePath('/')")
+        NuxtLink(:to="localePath('/')" :key="1")
             LogosLogo/ 
         .content
             NuxtLink.lin(:to="localePath('/contact')" class="upitem")

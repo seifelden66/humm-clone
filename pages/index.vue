@@ -1,5 +1,5 @@
 <template lang="pug">
-div(ref="main")
+div
   Hero/
   .box
     Food/
@@ -27,28 +27,24 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const main = ref();
-const ctx = ref();
-onMounted(()=>{
+
+onMounted(() => {
   const boxes = document.querySelectorAll('.box');
   boxes.forEach((box) => {
     gsap.from(box, {
-      autoAlpha:.25,
-      ease: "Power2.easeOut",
-      stagger: 0.2,
-      duration: 0.5,
+      autoAlpha:0,
+      stagger: 0.1,
+      duration: 0.2,
       scrollTrigger: {
+        start:'top 70%',
+        end:'bottom 90%',
         trigger: box,
         scrub: true,
       },
     });
   });
-}, main.value)
-onUnmounted(() => {
-  ctx.value.revert(); 
+    ScrollTrigger.refresh()
 });
-
-
 </script>
 
 <style lang="scss">
